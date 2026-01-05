@@ -5,7 +5,7 @@
 
 /* === CSS VARIABLES === */
 :root {
-    /* Premium Color Palette */
+    /* Light Mode Colors (Default) */
     --color-bg-primary: #ffffff;
     --color-bg-secondary: #fafbfc;
     --color-bg-tertiary: #f4f6f8;
@@ -19,6 +19,15 @@
     --color-accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --color-accent-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --color-accent-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+
+    --color-border: rgba(0, 0, 0, 0.08);
+    --color-card-bg: #ffffff;
+    --color-overlay: rgba(0, 0, 0, 0.05);
+
+    /* Navbar colors */
+    --navbar-bg: rgba(255, 255, 255, 0.7);
+    --navbar-bg-scrolled: rgba(255, 255, 255, 0.9);
+    --navbar-border: rgba(0, 0, 0, 0.05);
 
     /* Spacing System */
     --space-xs: 0.5rem;
@@ -76,6 +85,54 @@
     --z-modal: 400;
     --z-popover: 500;
     --z-tooltip: 600;
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+    --color-bg-primary: #0a0a0f;
+    --color-bg-secondary: #13131a;
+    --color-bg-tertiary: #1a1a24;
+
+    --color-text-primary: #f5f5f7;
+    --color-text-secondary: #a0a0b0;
+    --color-text-muted: #70707a;
+
+    --color-accent-primary: #8b7df7;
+    --color-accent-secondary: #9d8df7;
+    --color-accent-gradient: linear-gradient(135deg, #8b7df7 0%, #9d8df7 100%);
+    --color-accent-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --color-accent-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-card-bg: #13131a;
+    --color-overlay: rgba(255, 255, 255, 0.05);
+
+    /* Navbar colors */
+    --navbar-bg: rgba(10, 10, 15, 0.7);
+    --navbar-bg-scrolled: rgba(10, 10, 15, 0.9);
+    --navbar-border: rgba(255, 255, 255, 0.1);
+
+    /* Dark Mode Shadow Adjustments (softer, lighter shadows) */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -2px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -4px rgba(0, 0, 0, 0.7);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+    --shadow-glow: 0 0 30px rgba(139, 125, 247, 0.4);
+}
+
+/* Smooth Theme Transition */
+body,
+.navbar,
+.hero,
+.project-card,
+.footer,
+.gradient-orb {
+    transition: background-color var(--transition-base),
+                color var(--transition-base),
+                border-color var(--transition-base),
+                box-shadow var(--transition-base);
 }
 
 /* === RESET & BASE === */
@@ -195,6 +252,81 @@ body {
     }
 }
 
+/* === THEME TOGGLE BUTTON === */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: var(--z-fixed);
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-full);
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.theme-toggle-icon {
+    font-size: 1.25rem;
+    color: var(--color-accent-primary);
+    transition: all var(--transition-base);
+}
+
+/* Theme Toggle Icon Rotation */
+.theme-toggle[data-theme="dark"] .theme-toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Theme Toggle Ripple Effect */
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--color-accent-primary);
+    opacity: 0.3;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+}
+
+.theme-toggle:active::before {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/* Mobile Positioning */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .theme-toggle-icon {
+        font-size: 1.1rem;
+    }
+}
+
 /* === TYPOGRAPHY === */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
@@ -210,10 +342,10 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     z-index: var(--z-fixed);
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--navbar-bg);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--navbar-border);
     padding: var(--space-sm) 0;
     transition: all var(--transition-base);
     animation: slideDown 0.5s ease;
@@ -221,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar.scrolled {
     box-shadow: var(--shadow-md);
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--navbar-bg-scrolled);
 }
 
 .navbar .container {
