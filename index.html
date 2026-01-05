@@ -138,7 +138,7 @@ title: Portfolio - Belkis Aslani
             </h3>
             <div class="projects-grid">
                 {% for project in featured %}
-                <article class="project-card featured-card reveal">
+                <article class="project-card featured-card reveal" data-size="{{ project.size | default: 'large' }}">
                     <div class="project-image">
                         {% if project.image_mobile %}
                         <picture>
@@ -183,7 +183,7 @@ title: Portfolio - Belkis Aslani
             <div class="projects-grid">
                 {% for project in site.data.projects %}
                 {% unless project.featured %}
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-size="{{ project.size | default: 'medium' }}">
                     <div class="project-image">
                         {% if project.image_mobile %}
                         <picture>
