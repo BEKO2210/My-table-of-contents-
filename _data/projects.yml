@@ -1,17 +1,34 @@
-# Deine Projekte - Einfach neue Projekte hier hinzufügen!
+# Content Collection - Projekte, Musik, Bilder, Videos, PDFs, Texte
 # Format:
-# - name: Projekt Name
-#   description: Kurze Beschreibung
-#   image: /My-table-of-contents-/assets/images/projekt-bild.jpg
-#   image_mobile: /My-table-of-contents-/assets/images/projekt-bild-mobile.jpg (optional)
-#   url: https://link-zum-projekt.de
+# - name: Titel
+#   description: Beschreibung
+#   type: project/music/image/video/pdf/text (Typ des Contents)
+#   image: /My-table-of-contents-/assets/images/bild.jpg
+#   image_mobile: /My-table-of-contents-/assets/images/bild-mobile.jpg (optional)
+#   url: https://link-zum-content.de
 #   tags: [Tag1, Tag2, Tag3]
-#   featured: true  (optional - für hervorgehobene Projekte)
+#   category: AI/Design/Music/Art/Code (Kategorie)
+#   featured: true (optional - für hervorgehobene Items)
+#   size: small/medium/large (Grid-Größe, optional)
 
 - name: "BEL-KI"
   description: "Innovative KI-Anwendung mit modernster Technologie"
+  type: "project"
   image: "/My-table-of-contents-/assets/images/projects/belki-desktop.jpg"
   image_mobile: "/My-table-of-contents-/assets/images/projects/belki-mobile.jpg"
   url: "https://beko2210.github.io/BEL-KI/index.html"
   tags: ["AI", "Innovation", "Web App"]
+  category: "AI"
   featured: true
+  size: "large"
+
+- name: "MiniMax Space"
+  description: "Kreative Web-Anwendung mit innovativem Design"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/projekt2-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/projekt2-mobile.jpg"
+  url: "https://ve8o79ynlpzt.space.minimax.io/"
+  tags: ["Web", "Design", "Creative"]
+  category: "Design"
+  featured: true
+  size: "large"
