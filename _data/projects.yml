@@ -2,28 +2,16 @@
 # Format:
 # - name: Projekt Name
 #   description: Kurze Beschreibung
-#   image: /assets/images/projekt-bild.jpg  (oder externe URL)
+#   image: /My-table-of-contents-/assets/images/projekt-bild.jpg
+#   image_mobile: /My-table-of-contents-/assets/images/projekt-bild-mobile.jpg (optional)
 #   url: https://link-zum-projekt.de
 #   tags: [Tag1, Tag2, Tag3]
 #   featured: true  (optional - für hervorgehobene Projekte)
 
-- name: "K.Ai Modell"
-  description: "Innovatives KI-Modell mit modernster Technologie"
-  image: "https://via.placeholder.com/400x300/667eea/ffffff?text=K.Ai+Modell"
-  url: "https://github.com/BEKO2210"
-  tags: ["AI", "Machine Learning", "Innovation"]
+- name: "BEL-KI"
+  description: "Innovative KI-Anwendung mit modernster Technologie"
+  image: "/My-table-of-contents-/assets/images/projects/belki-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/belki-mobile.jpg"
+  url: "https://beko2210.github.io/BEL-KI/index.html"
+  tags: ["AI", "Innovation", "Web App"]
   featured: true
-
-- name: "Songtexte App"
-  description: "Kreative App für Songwriting und Textgestaltung"
-  image: "https://via.placeholder.com/400x300/764ba2/ffffff?text=Songtext+App"
-  url: "https://github.com/BEKO2210"
-  tags: ["Creative", "App", "Music"]
-  featured: true
-
-- name: "Portfolio Website"
-  description: "Moderne Portfolio-Seite mit Jekyll und GitHub Pages"
-  image: "https://via.placeholder.com/400x300/f093fb/ffffff?text=Portfolio"
-  url: "https://github.com/BEKO2210/My-table-of-contents-"
-  tags: ["Web", "Design", "GitHub Pages"]
-  featured: false

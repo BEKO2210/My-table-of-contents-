@@ -7,20 +7,18 @@ title: Portfolio - Belkis Aslani
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="gradient-text">Belkis Aslani</span>
-            </h1>
+            <h1 class="hero-title">Belkis Aslani</h1>
             <h2 class="hero-subtitle">Developer · Innovator · Creator</h2>
             <p class="hero-description">
-                Willkommen zu meinem Portfolio. Hier findest du alle meine Projekte,
-                von KI-Entwicklungen bis zu kreativen Apps.
+                Entdecke meine Projekte und kreative Arbeit.
+                Von KI-Anwendungen bis zu innovativen Web-Lösungen.
             </p>
             <div class="hero-cta">
                 <a href="#projekte" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> Projekte entdecken
+                    <i class="fas fa-rocket"></i> Projekte ansehen
                 </a>
                 <a href="https://github.com/BEKO2210" target="_blank" class="btn btn-secondary">
-                    <i class="fab fa-github"></i> GitHub Profil
+                    <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
         </div>
@@ -31,9 +29,9 @@ title: Portfolio - Belkis Aslani
 <section id="projekte" class="projects-section">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Meine Projekte</h2>
+            <h2 class="section-title">Projekte</h2>
             <p class="section-description">
-                Eine Übersicht über alle meine aktuellen und vergangenen Projekte
+                Eine Auswahl meiner Arbeiten und Projekte
             </p>
         </div>
 
@@ -42,16 +40,24 @@ title: Portfolio - Belkis Aslani
         {% if featured.size > 0 %}
         <div class="featured-section">
             <h3 class="featured-title">
-                <i class="fas fa-star"></i> Featured Projects
+                <i class="fas fa-star"></i> Featured
             </h3>
             <div class="projects-grid featured-grid">
                 {% for project in featured %}
                 <article class="project-card featured-card" data-tags="{{ project.tags | join: ',' }}">
                     <div class="project-image">
+                        {% if project.image_mobile %}
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="{{ project.image_mobile }}">
+                            <source media="(min-width: 769px)" srcset="{{ project.image }}">
+                            <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
+                        </picture>
+                        {% else %}
                         <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
+                        {% endif %}
                         <div class="project-overlay">
                             <a href="{{ project.url }}" target="_blank" class="overlay-link">
-                                <i class="fas fa-external-link-alt"></i> Projekt öffnen
+                                <i class="fas fa-external-link-alt"></i> Öffnen
                             </a>
                         </div>
                     </div>
@@ -66,7 +72,7 @@ title: Portfolio - Belkis Aslani
                         </div>
                         {% endif %}
                         <a href="{{ project.url }}" target="_blank" class="project-link">
-                            Mehr erfahren <i class="fas fa-arrow-right"></i>
+                            Projekt ansehen <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
@@ -76,16 +82,27 @@ title: Portfolio - Belkis Aslani
         {% endif %}
 
         <!-- All Projects -->
+        {% assign all_projects = site.data.projects %}
+        {% if all_projects.size > featured.size %}
         <div class="all-projects-section">
-            <h3 class="projects-subtitle">Alle Projekte</h3>
+            <h3 class="projects-subtitle">Weitere Projekte</h3>
             <div class="projects-grid">
                 {% for project in site.data.projects %}
+                {% unless project.featured %}
                 <article class="project-card" data-tags="{{ project.tags | join: ',' }}">
                     <div class="project-image">
+                        {% if project.image_mobile %}
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="{{ project.image_mobile }}">
+                            <source media="(min-width: 769px)" srcset="{{ project.image }}">
+                            <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
+                        </picture>
+                        {% else %}
                         <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
+                        {% endif %}
                         <div class="project-overlay">
                             <a href="{{ project.url }}" target="_blank" class="overlay-link">
-                                <i class="fas fa-external-link-alt"></i> Projekt öffnen
+                                <i class="fas fa-external-link-alt"></i> Öffnen
                             </a>
                         </div>
                     </div>
@@ -100,23 +117,25 @@ title: Portfolio - Belkis Aslani
                         </div>
                         {% endif %}
                         <a href="{{ project.url }}" target="_blank" class="project-link">
-                            Mehr erfahren <i class="fas fa-arrow-right"></i>
+                            Projekt ansehen <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
+                {% endunless %}
                 {% endfor %}
             </div>
         </div>
+        {% endif %}
 
         <!-- Projekt Counter -->
         <div class="stats-section">
             <div class="stat-card">
                 <div class="stat-number">{{ site.data.projects | size }}</div>
-                <div class="stat-label">Projekte insgesamt</div>
+                <div class="stat-label">Projekte</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">{{ featured.size }}</div>
-                <div class="stat-label">Featured Projekte</div>
+                <div class="stat-label">Featured</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">100%</div>
@@ -130,12 +149,12 @@ title: Portfolio - Belkis Aslani
 <section id="kontakt" class="contact-section">
     <div class="container">
         <div class="contact-content">
-            <h2 class="contact-title">Bereit für ein Projekt?</h2>
+            <h2 class="contact-title">Lass uns zusammenarbeiten</h2>
             <p class="contact-description">
-                Lass uns zusammenarbeiten und etwas Großartiges erschaffen.
+                Interessiert an einer Zusammenarbeit? Kontaktiere mich gerne.
             </p>
             <a href="https://github.com/BEKO2210" target="_blank" class="btn btn-primary btn-large">
-                <i class="fab fa-github"></i> Kontaktiere mich auf GitHub
+                <i class="fab fa-github"></i> Auf GitHub kontaktieren
             </a>
         </div>
     </div>

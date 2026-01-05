@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Google Fonts - Modern Tech Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,19 +23,12 @@
     {% seo %}
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <h1 class="logo">{{ site.author }}</h1>
-                <p class="tagline">{{ site.description }}</p>
+                <p class="tagline">Portfolio</p>
             </div>
             <div class="nav-links">
                 <a href="https://github.com/BEKO2210" target="_blank" class="nav-link">
@@ -62,21 +55,21 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>{{ site.author }}</h3>
-                    <p>High-Tech Portfolio & Innovation Showcase</p>
+                    <p>Developer & Creator</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Schnelllinks</h4>
+                    <h4>Links</h4>
                     <a href="https://github.com/BEKO2210" target="_blank">
                         <i class="fab fa-github"></i> GitHub
                     </a>
                 </div>
                 <div class="footer-section">
-                    <h4>Tech Stack</h4>
-                    <p>Jekyll · GitHub Pages · Modern CSS · JavaScript</p>
+                    <h4>Built with</h4>
+                    <p>Jekyll · GitHub Pages</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. Powered by Jekyll & GitHub Pages</p>
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}</p>
             </div>
         </div>
     </footer>
