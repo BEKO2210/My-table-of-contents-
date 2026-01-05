@@ -477,6 +477,73 @@
     console.log('%cBuilt with ❤️ and lots of ☕', 'font-size: 12px; color: #f093fb;');
 
     // =====================================
+    // 3D FLOATING CARD - MOUSE TRACKING
+    // =====================================
+    const floatingCard = document.getElementById('floating-card');
+
+    if (floatingCard) {
+        const cardInner = floatingCard.querySelector('.floating-card-inner');
+
+        floatingCard.addEventListener('mousemove', (e) => {
+            const rect = floatingCard.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -15;
+            const rotateY = ((x - centerX) / centerX) * 15;
+
+            if (cardInner) {
+                cardInner.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            }
+        });
+
+        floatingCard.addEventListener('mouseleave', () => {
+            if (cardInner) {
+                cardInner.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            }
+        });
+    }
+
+    // =====================================
+    // STATS COUNTER ANIMATION
+    // =====================================
+    function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2000;
+        const start = 0;
+        const increment = target / (duration / 16);
+        let current = start;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current);
+            }
+        }, 16);
+    }
+
+    // Trigger counter when card is visible
+    if (floatingCard) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = floatingCard.querySelectorAll('.stat-value');
+                    counters.forEach(counter => animateCounter(counter));
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(floatingCard);
+    }
+
+    // =====================================
     // LOADING COMPLETE
     // =====================================
     window.addEventListener('load', () => {
