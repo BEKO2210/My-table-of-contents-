@@ -304,7 +304,7 @@
     new ParticleSystem();
 
     // =====================================
-    // 3D CARD TILT EFFECT
+    // 3D CARD TILT EFFECT (Reduced)
     // =====================================
     const cards = document.querySelectorAll('.project-card');
 
@@ -317,10 +317,10 @@
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            const rotateX = (y - centerY) / 15;
-            const rotateY = (centerX - x) / 15;
+            const rotateX = (y - centerY) / 40;  // Reduziert von 15 auf 40
+            const rotateY = (centerX - x) / 40;  // Reduziert von 15 auf 40
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px)`;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;  // Reduziert von -15px auf -5px
         });
 
         card.addEventListener('mouseleave', () => {
