@@ -22,13 +22,13 @@
   featured: true
   size: "large"
 
-- name: "MiniMax Space"
-  description: "Kreative Web-Anwendung mit innovativem Design"
+- name: "Gateway Experiment"
+  description: "Das Gateway Experiment - Eine innovative Reise durch digitale Dimensionen"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/projekt2-desktop.jpg"
   image_mobile: "/My-table-of-contents-/assets/images/projects/projekt2-mobile.jpg"
   url: "https://ve8o79ynlpzt.space.minimax.io/"
-  tags: ["Web", "Design", "Creative"]
-  category: "Design"
+  tags: ["Experiment", "Innovation", "Digital Art"]
+  category: "Art"
   featured: true
   size: "large"
