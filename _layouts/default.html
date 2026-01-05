@@ -23,6 +23,21 @@
     {% seo %}
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Gradient Orbs Background -->
+    <div class="gradient-orbs">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Particle Background -->
+    <div class="particle-background">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -55,21 +70,30 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>{{ site.author }}</h3>
-                    <p>Developer & Creator</p>
+                    <p>Developer, Innovator & Creator</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Links</h4>
+                    <h4>Social</h4>
                     <a href="https://github.com/BEKO2210" target="_blank">
                         <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://huggingface.co/Beko2210" target="_blank">
+                        <i class="fas fa-face-smile"></i> HuggingFace
+                    </a>
+                    <a href="https://www.instagram.com/_b_to_the_kiss_" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/share/1DGo4F1oaF/" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
                     </a>
                 </div>
                 <div class="footer-section">
                     <h4>Built with</h4>
-                    <p>Jekyll · GitHub Pages</p>
+                    <p>Jekyll · GitHub Pages · Love ❤️</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}</p>
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
             </div>
         </div>
     </footer>

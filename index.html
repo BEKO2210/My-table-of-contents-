@@ -3,22 +3,56 @@ layout: default
 title: Portfolio - Belkis Aslani
 ---
 
-<!-- Hero Section -->
+<!-- Hero Section - Komplett Neu & Beeindruckend -->
 <section class="hero">
+    <div class="hero-background"></div>
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">Belkis Aslani</h1>
+            <!-- Availability Badge -->
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Verfügbar für Projekte</span>
+            </div>
+
+            <!-- Main Title mit Gradient & Typing Effect -->
+            <h1 class="hero-title">
+                <span class="gradient-text">Belkis Aslani</span>
+            </h1>
+
+            <!-- Subtitle -->
             <h2 class="hero-subtitle">Developer · Innovator · Creator</h2>
+
+            <!-- Description -->
             <p class="hero-description">
-                Entdecke meine Projekte und kreative Arbeit.
                 Von KI-Anwendungen bis zu innovativen Web-Lösungen.
+                Entdecke meine Projekte und kreative Arbeit.
             </p>
+
+            <!-- Call to Action Buttons -->
             <div class="hero-cta">
                 <a href="#projekte" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> Projekte ansehen
+                    <i class="fas fa-rocket"></i>
+                    <span>Projekte ansehen</span>
                 </a>
                 <a href="https://github.com/BEKO2210" target="_blank" class="btn btn-secondary">
-                    <i class="fab fa-github"></i> GitHub
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="hero-social">
+                <a href="https://github.com/BEKO2210" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://huggingface.co/Beko2210" target="_blank" class="social-link" aria-label="HuggingFace">
+                    <i class="fas fa-face-smile"></i>
+                </a>
+                <a href="https://www.instagram.com/_b_to_the_kiss_" target="_blank" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1DGo4F1oaF/" target="_blank" class="social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
                 </a>
             </div>
         </div>
@@ -28,10 +62,11 @@ title: Portfolio - Belkis Aslani
 <!-- Projects Section -->
 <section id="projekte" class="projects-section">
     <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Projekte</h2>
+        <div class="section-header reveal">
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Meine Projekte</h2>
             <p class="section-description">
-                Eine Auswahl meiner Arbeiten und Projekte
+                Eine Auswahl meiner besten Arbeiten und Projekte
             </p>
         </div>
 
@@ -39,12 +74,12 @@ title: Portfolio - Belkis Aslani
         {% assign featured = site.data.projects | where: "featured", true %}
         {% if featured.size > 0 %}
         <div class="featured-section">
-            <h3 class="featured-title">
+            <h3 class="featured-title reveal">
                 <i class="fas fa-star"></i> Featured
             </h3>
-            <div class="projects-grid featured-grid">
+            <div class="projects-grid">
                 {% for project in featured %}
-                <article class="project-card featured-card" data-tags="{{ project.tags | join: ',' }}">
+                <article class="project-card featured-card reveal">
                     <div class="project-image">
                         {% if project.image_mobile %}
                         <picture>
@@ -57,7 +92,7 @@ title: Portfolio - Belkis Aslani
                         {% endif %}
                         <div class="project-overlay">
                             <a href="{{ project.url }}" target="_blank" class="overlay-link">
-                                <i class="fas fa-external-link-alt"></i> Öffnen
+                                <i class="fas fa-external-link-alt"></i> Projekt öffnen
                             </a>
                         </div>
                     </div>
@@ -72,7 +107,7 @@ title: Portfolio - Belkis Aslani
                         </div>
                         {% endif %}
                         <a href="{{ project.url }}" target="_blank" class="project-link">
-                            Projekt ansehen <i class="fas fa-arrow-right"></i>
+                            Mehr erfahren <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
@@ -81,15 +116,15 @@ title: Portfolio - Belkis Aslani
         </div>
         {% endif %}
 
-        <!-- All Projects -->
+        <!-- All Other Projects -->
         {% assign all_projects = site.data.projects %}
         {% if all_projects.size > featured.size %}
         <div class="all-projects-section">
-            <h3 class="projects-subtitle">Weitere Projekte</h3>
+            <h3 class="projects-subtitle reveal">Weitere Projekte</h3>
             <div class="projects-grid">
                 {% for project in site.data.projects %}
                 {% unless project.featured %}
-                <article class="project-card" data-tags="{{ project.tags | join: ',' }}">
+                <article class="project-card reveal">
                     <div class="project-image">
                         {% if project.image_mobile %}
                         <picture>
@@ -102,7 +137,7 @@ title: Portfolio - Belkis Aslani
                         {% endif %}
                         <div class="project-overlay">
                             <a href="{{ project.url }}" target="_blank" class="overlay-link">
-                                <i class="fas fa-external-link-alt"></i> Öffnen
+                                <i class="fas fa-external-link-alt"></i> Projekt öffnen
                             </a>
                         </div>
                     </div>
@@ -117,7 +152,7 @@ title: Portfolio - Belkis Aslani
                         </div>
                         {% endif %}
                         <a href="{{ project.url }}" target="_blank" class="project-link">
-                            Projekt ansehen <i class="fas fa-arrow-right"></i>
+                            Mehr erfahren <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
@@ -127,17 +162,17 @@ title: Portfolio - Belkis Aslani
         </div>
         {% endif %}
 
-        <!-- Projekt Counter -->
+        <!-- Stats Section -->
         <div class="stats-section">
-            <div class="stat-card">
+            <div class="stat-card reveal">
                 <div class="stat-number">{{ site.data.projects | size }}</div>
                 <div class="stat-label">Projekte</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card reveal">
                 <div class="stat-number">{{ featured.size }}</div>
                 <div class="stat-label">Featured</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card reveal">
                 <div class="stat-number">100%</div>
                 <div class="stat-label">Open Source</div>
             </div>
@@ -148,13 +183,14 @@ title: Portfolio - Belkis Aslani
 <!-- Contact Section -->
 <section id="kontakt" class="contact-section">
     <div class="container">
-        <div class="contact-content">
+        <div class="contact-content reveal">
             <h2 class="contact-title">Lass uns zusammenarbeiten</h2>
             <p class="contact-description">
-                Interessiert an einer Zusammenarbeit? Kontaktiere mich gerne.
+                Hast du ein spannendes Projekt? Lass uns darüber sprechen und etwas Großartiges erschaffen.
             </p>
             <a href="https://github.com/BEKO2210" target="_blank" class="btn btn-primary btn-large">
-                <i class="fab fa-github"></i> Auf GitHub kontaktieren
+                <i class="fab fa-github"></i>
+                <span>Kontakt aufnehmen</span>
             </a>
         </div>
     </div>
