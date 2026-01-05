@@ -1,0 +1,142 @@
+---
+layout: default
+title: Portfolio - Belkis Aslani
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">Belkis Aslani</span>
+            </h1>
+            <h2 class="hero-subtitle">Developer · Innovator · Creator</h2>
+            <p class="hero-description">
+                Willkommen zu meinem Portfolio. Hier findest du alle meine Projekte,
+                von KI-Entwicklungen bis zu kreativen Apps.
+            </p>
+            <div class="hero-cta">
+                <a href="#projekte" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Projekte entdecken
+                </a>
+                <a href="https://github.com/BEKO2210" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> GitHub Profil
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projekte" class="projects-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Meine Projekte</h2>
+            <p class="section-description">
+                Eine Übersicht über alle meine aktuellen und vergangenen Projekte
+            </p>
+        </div>
+
+        <!-- Featured Projects -->
+        {% assign featured = site.data.projects | where: "featured", true %}
+        {% if featured.size > 0 %}
+        <div class="featured-section">
+            <h3 class="featured-title">
+                <i class="fas fa-star"></i> Featured Projects
+            </h3>
+            <div class="projects-grid featured-grid">
+                {% for project in featured %}
+                <article class="project-card featured-card" data-tags="{{ project.tags | join: ',' }}">
+                    <div class="project-image">
+                        <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="{{ project.url }}" target="_blank" class="overlay-link">
+                                <i class="fas fa-external-link-alt"></i> Projekt öffnen
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">{{ project.name }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        {% if project.tags %}
+                        <div class="project-tags">
+                            {% for tag in project.tags %}
+                            <span class="tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <a href="{{ project.url }}" target="_blank" class="project-link">
+                            Mehr erfahren <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- All Projects -->
+        <div class="all-projects-section">
+            <h3 class="projects-subtitle">Alle Projekte</h3>
+            <div class="projects-grid">
+                {% for project in site.data.projects %}
+                <article class="project-card" data-tags="{{ project.tags | join: ',' }}">
+                    <div class="project-image">
+                        <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="{{ project.url }}" target="_blank" class="overlay-link">
+                                <i class="fas fa-external-link-alt"></i> Projekt öffnen
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">{{ project.name }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        {% if project.tags %}
+                        <div class="project-tags">
+                            {% for tag in project.tags %}
+                            <span class="tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <a href="{{ project.url }}" target="_blank" class="project-link">
+                            Mehr erfahren <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Projekt Counter -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">{{ site.data.projects | size }}</div>
+                <div class="stat-label">Projekte insgesamt</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ featured.size }}</div>
+                <div class="stat-label">Featured Projekte</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Open Source</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="kontakt" class="contact-section">
+    <div class="container">
+        <div class="contact-content">
+            <h2 class="contact-title">Bereit für ein Projekt?</h2>
+            <p class="contact-description">
+                Lass uns zusammenarbeiten und etwas Großartiges erschaffen.
+            </p>
+            <a href="https://github.com/BEKO2210" target="_blank" class="btn btn-primary btn-large">
+                <i class="fab fa-github"></i> Kontaktiere mich auf GitHub
+            </a>
+        </div>
+    </div>
+</section>

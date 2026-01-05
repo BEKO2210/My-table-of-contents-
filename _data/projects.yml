@@ -1,0 +1,29 @@
+# Deine Projekte - Einfach neue Projekte hier hinzufügen!
+# Format:
+# - name: Projekt Name
+#   description: Kurze Beschreibung
+#   image: /assets/images/projekt-bild.jpg  (oder externe URL)
+#   url: https://link-zum-projekt.de
+#   tags: [Tag1, Tag2, Tag3]
+#   featured: true  (optional - für hervorgehobene Projekte)
+
+- name: "K.Ai Modell"
+  description: "Innovatives KI-Modell mit modernster Technologie"
+  image: "https://via.placeholder.com/400x300/667eea/ffffff?text=K.Ai+Modell"
+  url: "https://github.com/BEKO2210"
+  tags: ["AI", "Machine Learning", "Innovation"]
+  featured: true
+
+- name: "Songtexte App"
+  description: "Kreative App für Songwriting und Textgestaltung"
+  image: "https://via.placeholder.com/400x300/764ba2/ffffff?text=Songtext+App"
+  url: "https://github.com/BEKO2210"
+  tags: ["Creative", "App", "Music"]
+  featured: true
+
+- name: "Portfolio Website"
+  description: "Moderne Portfolio-Seite mit Jekyll und GitHub Pages"
+  image: "https://via.placeholder.com/400x300/f093fb/ffffff?text=Portfolio"
+  url: "https://github.com/BEKO2210/My-table-of-contents-"
+  tags: ["Web", "Design", "GitHub Pages"]
+  featured: false

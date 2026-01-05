@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.description }}">
+    <title>{{ page.title | default: site.title }}</title>
+
+    <!-- Preconnect für bessere Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts - Modern Tech Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- SEO Tags -->
+    {% seo %}
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 class="logo">{{ site.author }}</h1>
+                <p class="tagline">{{ site.description }}</p>
+            </div>
+            <div class="nav-links">
+                <a href="https://github.com/BEKO2210" target="_blank" class="nav-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#projekte" class="nav-link">
+                    <i class="fas fa-folder-open"></i> Projekte
+                </a>
+                <a href="#kontakt" class="nav-link">
+                    <i class="fas fa-envelope"></i> Kontakt
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>{{ site.author }}</h3>
+                    <p>High-Tech Portfolio & Innovation Showcase</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Schnelllinks</h4>
+                    <a href="https://github.com/BEKO2210" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h4>Tech Stack</h4>
+                    <p>Jekyll · GitHub Pages · Modern CSS · JavaScript</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. Powered by Jekyll & GitHub Pages</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
