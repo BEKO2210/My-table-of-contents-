@@ -43,26 +43,65 @@
         <canvas id="particles-canvas"></canvas>
     </div>
 
-    <!-- Navigation -->
+    <!-- Ultra-Thin Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <h1 class="logo">{{ site.author }}</h1>
                 <p class="tagline">Portfolio</p>
             </div>
-            <div class="nav-links">
-                <a href="https://github.com/BEKO2210" target="_blank" class="nav-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="#projekte" class="nav-link">
-                    <i class="fas fa-folder-open"></i> Projekte
-                </a>
-                <a href="#kontakt" class="nav-link">
-                    <i class="fas fa-envelope"></i> Kontakt
-                </a>
-            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Slide-out Menu -->
+    <div class="nav-menu" id="nav-menu">
+        <div class="nav-links">
+            <a href="#projekte" class="nav-link">
+                <i class="fas fa-folder-open"></i>
+                <span>Projekte</span>
+            </a>
+            <a href="https://github.com/BEKO2210" target="_blank" class="nav-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://x.com/XxBeko88xX" target="_blank" class="nav-link">
+                <i class="fab fa-x-twitter"></i>
+                <span>X (Twitter)</span>
+            </a>
+            <a href="https://huggingface.co/Beko2210" target="_blank" class="nav-link">
+                <i class="fas fa-face-smile"></i>
+                <span>HuggingFace</span>
+            </a>
+            <a href="https://www.instagram.com/_b_to_the_kiss_" target="_blank" class="nav-link">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/share/1DGo4F1oaF/" target="_blank" class="nav-link">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="#kontakt" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                <span>Kontakt</span>
+            </a>
+            <a href="{{ '/impressum.html' | relative_url }}" class="nav-link">
+                <i class="fas fa-info-circle"></i>
+                <span>Impressum</span>
+            </a>
+            <a href="{{ '/datenschutz.html' | relative_url }}" class="nav-link">
+                <i class="fas fa-shield-alt"></i>
+                <span>Datenschutz</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <!-- Main Content -->
     <main>
@@ -81,6 +120,9 @@
                     <h4>Social</h4>
                     <a href="https://github.com/BEKO2210" target="_blank">
                         <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://x.com/XxBeko88xX" target="_blank">
+                        <i class="fab fa-x-twitter"></i> X (Twitter)
                     </a>
                     <a href="https://huggingface.co/Beko2210" target="_blank">
                         <i class="fas fa-face-smile"></i> HuggingFace

@@ -62,6 +62,59 @@
     });
 
     // =====================================
+    // HAMBURGER MENU TOGGLE
+    // =====================================
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+
+    // Toggle menu
+    function toggleMenu() {
+        menuToggle?.classList.toggle('active');
+        navMenu?.classList.toggle('active');
+        menuOverlay?.classList.toggle('active');
+
+        // Prevent body scroll when menu is open
+        if (navMenu?.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Close menu
+    function closeMenu() {
+        menuToggle?.classList.remove('active');
+        navMenu?.classList.remove('active');
+        menuOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Menu toggle button
+    menuToggle?.addEventListener('click', toggleMenu);
+
+    // Menu overlay click
+    menuOverlay?.addEventListener('click', closeMenu);
+
+    // Close menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Only close menu for internal links (not external)
+            if (link.getAttribute('href')?.startsWith('#')) {
+                closeMenu();
+            }
+        });
+    });
+
+    // Close menu on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu?.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+
+    // =====================================
     // SCROLL PROGRESS BAR
     // =====================================
     const scrollProgress = document.querySelector('.scroll-progress');
@@ -451,12 +504,7 @@
     // =====================================
     // KEYBOARD NAVIGATION
     // =====================================
-    document.addEventListener('keydown', (e) => {
-        // ESC to scroll to top
-        if (e.key === 'Escape') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    });
+    // ESC key handling is in the menu toggle section
 
     // =====================================
     // CONSOLE EASTER EGG
