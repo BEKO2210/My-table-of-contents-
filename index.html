@@ -161,6 +161,14 @@ title: Portfolio - Belkis Aslani
                     <div class="project-content">
                         <h3 class="project-title">{{ project.name }}</h3>
                         <p class="project-description">{{ project.description }}</p>
+                        {% if project.audio %}
+                        <div class="project-audio">
+                            <audio controls style="width: 100%; margin: 1rem 0;">
+                                <source src="{{ project.audio }}" type="audio/mpeg">
+                                Dein Browser unterstützt kein Audio.
+                            </audio>
+                        </div>
+                        {% endif %}
                         {% if project.tags %}
                         <div class="project-tags">
                             {% for tag in project.tags %}
@@ -206,6 +214,14 @@ title: Portfolio - Belkis Aslani
                     <div class="project-content">
                         <h3 class="project-title">{{ project.name }}</h3>
                         <p class="project-description">{{ project.description }}</p>
+                        {% if project.audio %}
+                        <div class="project-audio">
+                            <audio controls style="width: 100%; margin: 1rem 0;">
+                                <source src="{{ project.audio }}" type="audio/mpeg">
+                                Dein Browser unterstützt kein Audio.
+                            </audio>
+                        </div>
+                        {% endif %}
                         {% if project.tags %}
                         <div class="project-tags">
                             {% for tag in project.tags %}
