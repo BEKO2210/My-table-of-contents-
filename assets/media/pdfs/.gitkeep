@@ -1,0 +1,12 @@
+# Platzhalter-Datei
+
+Dieser Ordner ist für PDF-Dateien.
+
+## Verwendung:
+1. PDF-Dateien hier hochladen
+2. In HTML einbetten mit:
+```html
+<embed src="{{ '/assets/media/pdfs/dateiname.pdf' | relative_url }}" type="application/pdf" width="100%" height="600px" />
+```
+
+Siehe MEDIA-GUIDE.md für weitere Beispiele.

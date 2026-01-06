@@ -1,0 +1,14 @@
+# Platzhalter-Datei
+
+Dieser Ordner ist für Audio-Dateien (MP3, WAV, OGG).
+
+## Verwendung:
+1. Audio-Dateien hier hochladen
+2. In HTML einbetten mit:
+```html
+<audio controls style="width: 100%;">
+    <source src="{{ '/assets/media/audio/dateiname.mp3' | relative_url }}" type="audio/mpeg">
+</audio>
+```
+
+Siehe MEDIA-GUIDE.md für weitere Beispiele.

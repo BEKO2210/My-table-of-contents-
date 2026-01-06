@@ -1,0 +1,14 @@
+# Platzhalter-Datei
+
+Dieser Ordner ist für Download-Dateien (ZIP, RAR, TAR, etc.).
+
+## Verwendung:
+1. Download-Dateien hier hochladen
+2. Download-Button erstellen:
+```html
+<a href="{{ '/assets/media/downloads/dateiname.zip' | relative_url }}" download class="btn btn-primary">
+    <i class="fas fa-download"></i> Download
+</a>
+```
+
+Siehe MEDIA-GUIDE.md für weitere Beispiele.

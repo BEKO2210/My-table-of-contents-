@@ -1,0 +1,14 @@
+# Platzhalter-Datei
+
+Dieser Ordner ist für Video-Dateien (MP4, WEBM).
+
+## Verwendung:
+1. Video-Dateien hier hochladen
+2. In HTML einbetten mit:
+```html
+<video controls width="100%">
+    <source src="{{ '/assets/media/videos/dateiname.mp4' | relative_url }}" type="video/mp4">
+</video>
+```
+
+Siehe MEDIA-GUIDE.md für weitere Beispiele.
