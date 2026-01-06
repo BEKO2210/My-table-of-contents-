@@ -198,7 +198,7 @@
 
                     if (distance < 120) {
                         const opacity = 1 - (distance / 120);
-                        this.ctx.strokeStyle = `rgba(14, 165, 233, ${opacity * 0.2})`; // Sky Blue
+                        this.ctx.strokeStyle = `rgba(26, 115, 232, ${opacity * 0.2})`; // Google Blue
                         this.ctx.lineWidth = 1;
                         this.ctx.beginPath();
                         this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
@@ -292,7 +292,7 @@
         }
 
         draw(ctx) {
-            ctx.fillStyle = 'rgba(14, 165, 233, 0.5)'; // Sky Blue
+            ctx.fillStyle = 'rgba(26, 115, 232, 0.4)'; // Google Blue
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.closePath();
