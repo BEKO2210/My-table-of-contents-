@@ -583,6 +583,24 @@ a:hover {
     box-shadow: var(--shadow-md);
 }
 
+/* Dark Mode Fix: Social Links Visited/Active States */
+.social-link:visited,
+.social-link:active,
+.social-link:focus {
+    color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .social-link:visited,
+[data-theme="dark"] .social-link:active,
+[data-theme="dark"] .social-link:focus {
+    color: #000000;
+    background: var(--color-primary);
+}
+
+[data-theme="dark"] .social-link:hover {
+    color: #000000;
+}
+
 .social-link i {
     font-size: var(--text-xl);
 }
@@ -671,6 +689,23 @@ a:hover {
     transform: translateY(-2px);
 }
 
+/* Dark Mode Fix: Primary Buttons behalten weiße Schrift */
+.btn-primary:visited,
+.btn-primary:active,
+.btn-primary:focus {
+    color: white;
+}
+
+[data-theme="dark"] .btn-primary:visited,
+[data-theme="dark"] .btn-primary:active,
+[data-theme="dark"] .btn-primary:focus {
+    color: #000000;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    color: #000000;
+}
+
 .btn-secondary {
     background: var(--color-bg);
     color: var(--color-primary);
@@ -683,6 +718,27 @@ a:hover {
     border-color: var(--color-primary);
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
+}
+
+/* Dark Mode Fix: Visited/Active/Focus States */
+.btn-secondary:visited,
+.btn-secondary:active,
+.btn-secondary:focus {
+    color: var(--color-primary);
+}
+
+/* Dark Mode: Schwarze Schrift für sekundäre Buttons im aktiven Zustand */
+[data-theme="dark"] .btn-secondary:visited,
+[data-theme="dark"] .btn-secondary:active,
+[data-theme="dark"] .btn-secondary:focus {
+    color: #000000;
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    color: #000000;
+    background: var(--color-primary-hover);
 }
 
 .btn-large {
@@ -852,6 +908,13 @@ section {
     transform: translateY(-2px);
 }
 
+/* Dark Mode Fix: Overlay Links immer weiß */
+.overlay-link:visited,
+.overlay-link:active,
+.overlay-link:focus {
+    color: white;
+}
+
 .project-content {
     padding: var(--spacing-6);
 }
@@ -912,6 +975,19 @@ section {
 
 .project-link:hover i {
     transform: translateX(4px);
+}
+
+/* Dark Mode Fix: Project Links behalten Primary Color */
+.project-link:visited,
+.project-link:active,
+.project-link:focus {
+    color: var(--color-primary);
+}
+
+[data-theme="dark"] .project-link:visited,
+[data-theme="dark"] .project-link:active,
+[data-theme="dark"] .project-link:focus {
+    color: var(--color-primary);
 }
 
 /* === STATS SECTION === */
