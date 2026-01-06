@@ -477,35 +477,11 @@
     console.log('%cBuilt with ❤️ and lots of ☕', 'font-size: 12px; color: #f093fb;');
 
     // =====================================
-    // 3D FLOATING CARD - MOUSE TRACKING
+    // 3D FLOATING CARD - DISABLED (No scroll effect)
     // =====================================
-    const floatingCard = document.getElementById('floating-card');
-
-    if (floatingCard) {
-        const cardInner = floatingCard.querySelector('.floating-card-inner');
-
-        floatingCard.addEventListener('mousemove', (e) => {
-            const rect = floatingCard.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = ((y - centerY) / centerY) * -15;
-            const rotateY = ((x - centerX) / centerX) * 15;
-
-            if (cardInner) {
-                cardInner.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-            }
-        });
-
-        floatingCard.addEventListener('mouseleave', () => {
-            if (cardInner) {
-                cardInner.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-            }
-        });
-    }
+    // Card effects completely disabled per user request
+    // No transform, no scale, no rotation
+    // Only counter animation active
 
     // =====================================
     // STATS COUNTER ANIMATION

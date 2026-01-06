@@ -10,9 +10,9 @@
     --color-bg-secondary: #f8fafc;
     --color-bg-tertiary: #f1f5f9;
 
-    --color-text-primary: #0f172a;
-    --color-text-secondary: #475569;
-    --color-text-muted: #64748b;
+    --color-text-primary: #000000;  /* Pure Black for maximum readability */
+    --color-text-secondary: #1a1a1a;  /* Almost black */
+    --color-text-muted: #4a4a4a;  /* Dark gray */
 
     --color-accent-primary: #0ea5e9;  /* Sky Blue */
     --color-accent-secondary: #06b6d4; /* Cyan */
@@ -88,39 +88,43 @@
     --z-theme-toggle: 700;
 }
 
-/* Dark Mode Colors */
+/* === PREMIUM DARK MODE === */
 [data-theme="dark"] {
-    --color-bg-primary: #0a0a0f;
-    --color-bg-secondary: #13131a;
-    --color-bg-tertiary: #1a1a24;
+    /* Ultra Dark Backgrounds */
+    --color-bg-primary: #000000;  /* Pure black */
+    --color-bg-secondary: #0d0d0d;  /* Almost black */
+    --color-bg-tertiary: #1a1a1a;  /* Dark gray */
 
-    --color-text-primary: #f5f5f7;
-    --color-text-secondary: #a0a0b0;
-    --color-text-muted: #70707a;
+    /* Pure White Text for Maximum Contrast */
+    --color-text-primary: #ffffff;  /* Pure white */
+    --color-text-secondary: #e0e0e0;  /* Light gray */
+    --color-text-muted: #a0a0a0;  /* Medium gray */
 
-    --color-accent-primary: #38bdf8;  /* Lighter Sky Blue for dark */
-    --color-accent-secondary: #22d3ee; /* Lighter Cyan for dark */
+    /* Bright Accent Colors for Dark Mode */
+    --color-accent-primary: #38bdf8;  /* Bright Sky Blue */
+    --color-accent-secondary: #22d3ee; /* Bright Cyan */
     --color-accent-gradient: linear-gradient(135deg, #38bdf8 0%, #22d3ee 100%);
-    --color-accent-gradient-2: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); /* Blue */
-    --color-accent-gradient-3: linear-gradient(135deg, #34d399 0%, #10b981 100%); /* Emerald Green */
+    --color-accent-gradient-2: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    --color-accent-gradient-3: linear-gradient(135deg, #34d399 0%, #10b981 100%);
 
-    --color-border: rgba(255, 255, 255, 0.1);
-    --color-card-bg: #13131a;
+    /* Dark Mode Borders & Cards */
+    --color-border: rgba(255, 255, 255, 0.15);  /* Lighter border */
+    --color-card-bg: #0d0d0d;  /* Dark card background */
     --color-overlay: rgba(255, 255, 255, 0.05);
 
-    /* Navbar colors */
-    --navbar-bg: rgba(10, 10, 15, 0.7);
-    --navbar-bg-scrolled: rgba(10, 10, 15, 0.9);
+    /* Dark Navbar with Blur */
+    --navbar-bg: rgba(0, 0, 0, 0.8);
+    --navbar-bg-scrolled: rgba(0, 0, 0, 0.95);
     --navbar-border: rgba(255, 255, 255, 0.1);
 
-    /* Dark Mode Shadow Adjustments (softer, lighter shadows) */
-    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.5);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -2px rgba(0, 0, 0, 0.6);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -4px rgba(0, 0, 0, 0.7);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
-    --shadow-glow: 0 0 30px rgba(56, 189, 248, 0.4);
+    /* Premium Dark Shadows with Glow */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.9), 0 1px 2px -1px rgba(0, 0, 0, 0.9);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.95), 0 2px 4px -2px rgba(0, 0, 0, 0.95);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 1), 0 4px 6px -4px rgba(0, 0, 0, 1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 1), 0 8px 10px -6px rgba(0, 0, 0, 1);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 1);
+    --shadow-glow: 0 0 30px rgba(56, 189, 248, 0.5), 0 0 60px rgba(56, 189, 248, 0.2);
 }
 
 /* Smooth Theme Transition */
@@ -1182,7 +1186,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary i,
 .btn-secondary span {
-    color: inherit;
+    color: inherit !important;
+}
+
+/* Dark Mode Button Override */
+[data-theme="dark"] .btn-secondary {
+    background: #0d0d0d !important;
+    color: #38bdf8 !important;  /* Bright cyan in dark mode */
+    border-color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: #38bdf8 !important;
+    color: #000000 !important;  /* Black text on cyan background */
 }
 
 .btn i {
