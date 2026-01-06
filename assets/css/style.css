@@ -451,14 +451,17 @@ a:hover {
     height: 1.5em;
     min-width: 200px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .role-item {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(100%);
     opacity: 0;
-    transform: translateY(100%);
     color: var(--color-primary);
     white-space: nowrap;
     animation: roleSlide 8s infinite;
@@ -470,9 +473,18 @@ a:hover {
 .role-item:nth-child(4) { animation-delay: 6s; }
 
 @keyframes roleSlide {
-    0%, 20% { opacity: 0; transform: translateY(100%); }
-    25%, 45% { opacity: 1; transform: translateY(0); }
-    50%, 100% { opacity: 0; transform: translateY(-100%); }
+    0%, 20% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(100%);
+    }
+    25%, 45% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50%, 100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-100%);
+    }
 }
 
 /* Description */
@@ -500,7 +512,7 @@ a:hover {
     display: flex;
     gap: var(--spacing-3);
     justify-content: center;
-    margin-bottom: var(--spacing-12);
+    margin-bottom: var(--spacing-20);
 }
 
 .social-link {
@@ -540,7 +552,7 @@ a:hover {
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: var(--spacing-12);
+    bottom: var(--spacing-6);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
