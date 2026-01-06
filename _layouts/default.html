@@ -46,9 +46,14 @@
     <!-- Ultra-Thin Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">
-                <h1 class="logo">{{ site.author }}</h1>
-                <p class="tagline">Portfolio</p>
+            <div class="nav-left">
+                <a href="{{ '/' | relative_url }}" class="home-btn" aria-label="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <div class="nav-brand">
+                    <h1 class="logo">{{ site.author }}</h1>
+                    <p class="tagline">Portfolio</p>
+                </div>
             </div>
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
                 <span></span>

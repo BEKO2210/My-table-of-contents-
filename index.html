@@ -225,9 +225,22 @@ title: Portfolio - Belkis Aslani
         {% endif %}
 
         <!-- Stats Section -->
+        {% assign total_projects = site.data.projects | size %}
+        {% assign open_source_count = 0 %}
+        {% for project in site.data.projects %}
+            {% if project.open_source == true or project.open_source == nil %}
+                {% assign open_source_count = open_source_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+        {% if total_projects > 0 %}
+            {% assign open_source_percentage = open_source_count | times: 100 | divided_by: total_projects %}
+        {% else %}
+            {% assign open_source_percentage = 0 %}
+        {% endif %}
+
         <div class="stats-section">
             <div class="stat-card reveal">
-                <div class="stat-number">{{ site.data.projects | size }}</div>
+                <div class="stat-number">{{ total_projects }}</div>
                 <div class="stat-label">Projekte</div>
             </div>
             <div class="stat-card reveal">
@@ -235,7 +248,7 @@ title: Portfolio - Belkis Aslani
                 <div class="stat-label">Featured</div>
             </div>
             <div class="stat-card reveal">
-                <div class="stat-number">100%</div>
+                <div class="stat-number">{{ open_source_percentage }}%</div>
                 <div class="stat-label">Open Source</div>
             </div>
         </div>

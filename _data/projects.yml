@@ -10,6 +10,7 @@
 #   category: AI/Design/Music/Art/Code (Kategorie)
 #   featured: true (optional - für hervorgehobene Items)
 #   size: small/medium/large (Grid-Größe, optional)
+#   open_source: true/false (optional - default: true)
 
 - name: "BEL-KI"
   description: "Innovative KI-Anwendung mit modernster Technologie"
@@ -21,6 +22,7 @@
   category: "AI"
   featured: true
   size: "large"
+  open_source: true
 
 - name: "Gateway Experiment"
   description: "Das Gateway Experiment - Eine innovative Reise durch digitale Dimensionen"
@@ -32,3 +34,4 @@
   category: "Art"
   featured: true
   size: "large"
+  open_source: true
