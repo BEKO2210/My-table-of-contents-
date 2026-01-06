@@ -591,3 +591,169 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// =====================================
+// CONTACT MODAL WITH NEURAL NETWORK
+// =====================================
+(function() {
+    const modal = document.getElementById('contactModal');
+    const openBtn = document.getElementById('openContactModal');
+    const closeBtn = document.getElementById('closeModal');
+    const overlay = document.getElementById('modalOverlay');
+    const canvas = document.getElementById('neuralCanvas');
+
+    if (!modal || !openBtn || !closeBtn || !overlay || !canvas) return;
+
+    // Neural Network Animation
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animationId;
+
+    // Resize canvas to match button
+    function resizeCanvas() {
+        const rect = openBtn.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+    }
+
+    // Particle class for neural network
+    class Particle {
+        constructor() {
+            this.reset();
+        }
+
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.radius = Math.random() * 2 + 1;
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        }
+
+        draw() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            ctx.fillStyle = isDark ? 'rgba(138, 180, 248, 0.8)' : 'rgba(255, 255, 255, 0.9)';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    // Initialize particles
+    function initParticles() {
+        particles = [];
+        const particleCount = 20;
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+    }
+
+    // Draw connections between particles
+    function drawConnections() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const maxDistance = 80;
+
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < maxDistance) {
+                    const opacity = (1 - distance / maxDistance) * 0.5;
+                    ctx.strokeStyle = isDark 
+                        ? `rgba(138, 180, 248, ${opacity})` 
+                        : `rgba(255, 255, 255, ${opacity})`;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    // Animate neural network
+    function animateNeural() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+
+        drawConnections();
+        animationId = requestAnimationFrame(animateNeural);
+    }
+
+    // Start animation
+    function startNeuralAnimation() {
+        resizeCanvas();
+        initParticles();
+        animateNeural();
+    }
+
+    // Stop animation
+    function stopNeuralAnimation() {
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+        }
+    }
+
+    // Initialize on load
+    window.addEventListener('load', startNeuralAnimation);
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+    });
+
+    // Modal functions
+    function openModal() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Event listeners
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Prevent closing when clicking inside modal content
+    const modalContainer = document.querySelector('.modal-container');
+    if (modalContainer) {
+        modalContainer.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+
+    // Theme change listener - restart animation
+    const themeObserver = new MutationObserver(() => {
+        stopNeuralAnimation();
+        startNeuralAnimation();
+    });
+
+    themeObserver.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+    });
+})();
