@@ -595,14 +595,25 @@ document.head.appendChild(style);
 // =====================================
 // CONTACT MODAL WITH NEURAL NETWORK
 // =====================================
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('contactModal');
     const openBtn = document.getElementById('openContactModal');
     const closeBtn = document.getElementById('closeModal');
     const overlay = document.getElementById('modalOverlay');
     const canvas = document.getElementById('neuralCanvas');
 
-    if (!modal || !openBtn || !closeBtn || !overlay || !canvas) return;
+    if (!modal || !openBtn || !closeBtn || !overlay || !canvas) {
+        console.error('Contact Modal: Ein oder mehrere Elemente nicht gefunden!', {
+            modal: !!modal,
+            openBtn: !!openBtn,
+            closeBtn: !!closeBtn,
+            overlay: !!overlay,
+            canvas: !!canvas
+        });
+        return;
+    }
+
+    console.log('✅ Contact Modal initialized successfully!');
 
     // Neural Network Animation
     const ctx = canvas.getContext('2d');
@@ -717,17 +728,23 @@ document.head.appendChild(style);
 
     // Modal functions
     function openModal() {
+        console.log('🎯 Opening contact modal...');
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
+        console.log('🎯 Closing contact modal...');
         modal.classList.remove('active');
         document.body.style.overflow = '';
     }
 
     // Event listeners
-    openBtn.addEventListener('click', openModal);
+    console.log('📌 Adding event listeners...');
+    openBtn.addEventListener('click', function(e) {
+        console.log('🖱️ Button clicked!', e);
+        openModal();
+    });
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', closeModal);
 
@@ -756,4 +773,4 @@ document.head.appendChild(style);
         attributes: true,
         attributeFilter: ['data-theme']
     });
-})();
+});
