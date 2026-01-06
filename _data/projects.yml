@@ -35,3 +35,14 @@
   featured: true
   size: "large"
   open_source: true
+
+- name: "Papaoutai (Deutsch)"
+  description: "Mein deutsches Cover von Papaoutai - Text und Produktion."
+  type: "music"
+  image: "/My-table-of-contents-/assets/images/cover-papaoutai.jpg" 
+  url: "#" 
+  tags: ["Cover", "Musik", "Produktion"]
+  category: "Music"
+  featured: false
+  size: "medium"
+  open_source: false
