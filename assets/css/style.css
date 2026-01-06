@@ -775,6 +775,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 2;
     overflow: hidden;
+    pointer-events: auto;
 }
 
 .floating-card-inner {
@@ -783,6 +784,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.1s ease;
     transform-style: preserve-3d;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .card-front {
@@ -801,6 +803,13 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(20px);
     position: relative;
     overflow: hidden;
+    pointer-events: none;
+}
+
+.card-stats,
+.card-icon,
+.stat-item {
+    pointer-events: none;
 }
 
 .card-front::before {
@@ -1157,18 +1166,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary {
     background: var(--color-card-bg);
-    color: var(--color-accent-primary);
-    border: 2px solid var(--color-accent-primary);
+    color: var(--color-accent-primary) !important;  /* Force cyan color */
+    border: 2px solid var(--color-accent-primary) !important;
     box-shadow: var(--shadow-md);
     font-weight: 600;
 }
 
 .btn-secondary:hover {
-    background: var(--color-accent-primary);
-    color: white;
-    border-color: var(--color-accent-primary);
+    background: var(--color-accent-primary) !important;
+    color: white !important;
+    border-color: var(--color-accent-primary) !important;
     transform: translateY(-3px);
     box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.btn-secondary i,
+.btn-secondary span {
+    color: inherit;
 }
 
 .btn i {
