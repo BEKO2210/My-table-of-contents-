@@ -393,6 +393,25 @@ a:hover {
     text-align: center;
 }
 
+/* Nav Link Button (for modal triggers) */
+.nav-link-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.nav-link-button:hover {
+    background: var(--color-bg-secondary);
+    color: var(--color-text);
+    transform: translateX(4px);
+}
+
+[data-theme="dark"] .nav-link-button:hover {
+    background: var(--color-bg-tertiary);
+}
+
 /* Menu Overlay */
 .menu-overlay {
     position: fixed;
