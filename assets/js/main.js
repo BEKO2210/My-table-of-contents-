@@ -595,23 +595,33 @@ document.head.appendChild(style);
 // =====================================
 // CONTACT MODAL
 // =====================================
+console.log('🔍 [MODAL] Script wird geladen...');
+
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔍 [MODAL] DOM geladen, suche Elemente...');
+
     const modal = document.getElementById('contactModal');
     const openBtn = document.getElementById('openContactModal');
     const closeBtn = document.getElementById('closeModal');
     const overlay = document.getElementById('modalOverlay');
 
+    console.log('🔍 [MODAL] Elemente gefunden:', {
+        modal: modal ? '✓ GEFUNDEN' : '✗ FEHLT',
+        openBtn: openBtn ? '✓ GEFUNDEN' : '✗ FEHLT',
+        closeBtn: closeBtn ? '✓ GEFUNDEN' : '✗ FEHLT',
+        overlay: overlay ? '✓ GEFUNDEN' : '✗ FEHLT'
+    });
+
     if (!modal || !openBtn || !closeBtn || !overlay) {
-        console.error('Contact Modal: Ein oder mehrere Elemente nicht gefunden!', {
-            modal: !!modal,
-            openBtn: !!openBtn,
-            closeBtn: !!closeBtn,
-            overlay: !!overlay
-        });
+        console.error('❌ [MODAL] Fehlende Elemente - Modal kann nicht initialisiert werden!');
+        if (!modal) console.error('  → Modal #contactModal fehlt');
+        if (!openBtn) console.error('  → Button #openContactModal fehlt');
+        if (!closeBtn) console.error('  → Button #closeModal fehlt');
+        if (!overlay) console.error('  → Overlay #modalOverlay fehlt');
         return;
     }
 
-    console.log('✅ Contact Modal initialized successfully!');
+    console.log('✅ [MODAL] Alle Elemente gefunden! Initialisiere...');
 
     // Modal functions
     function openModal() {
@@ -627,13 +637,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Event listeners
-    console.log('📌 Adding event listeners...');
+    console.log('📌 [MODAL] Füge Event Listeners hinzu...');
+
     openBtn.addEventListener('click', function(e) {
-        console.log('🖱️ Button clicked!', e);
+        console.log('🖱️ [MODAL] Button wurde geklickt!', e);
+        e.preventDefault();
+        e.stopPropagation();
         openModal();
     });
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
+
+    closeBtn.addEventListener('click', function(e) {
+        console.log('❌ [MODAL] Close Button geklickt');
+        closeModal();
+    });
+
+    overlay.addEventListener('click', function(e) {
+        console.log('🖱️ [MODAL] Overlay geklickt');
+        closeModal();
+    });
+
+    console.log('✅ [MODAL] Event Listeners hinzugefügt!');
 
     // Close on ESC key
     document.addEventListener('keydown', (e) => {
