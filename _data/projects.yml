@@ -51,8 +51,8 @@
 - name: "Gehaltsrechner"
   description: "Mobile-first PWA zur Live-Berechnung von Brutto/Netto-Gehalt mit genauen Steuer- und Sozialabgaben-Sätzen für 2026"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/gehaltsrechner-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/gehaltsrechner-mobile.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/gehaltsrechner.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/gehaltsrechner.jpg"
   url: "https://beko2210.github.io/gehaltsrechner"
   tags: ["PWA", "JavaScript", "Mobile-First", "FinTech"]
   category: "Code"
