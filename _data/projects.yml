@@ -12,6 +12,8 @@
 #   size: small/medium/large (Grid-Größe, optional)
 #   open_source: true/false (optional - default: true)
 
+# FEATURED PROJECTS
+
 - name: "BEL-KI"
   description: "Innovative KI-Anwendung mit modernster Technologie"
   type: "project"
@@ -58,4 +60,122 @@
   category: "Code"
   featured: false
   size: "medium"
+  open_source: true
+
+# NEW PROJECTS - To be added with images
+
+- name: "HomeOfficeDeutschland"
+  description: "Remote Jobboard für Deutschland – passive Einkommensstrategie"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/homeofficedeutschland-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/homeofficedeutschland-mobile.jpg"
+  url: "https://beko2210.github.io/homeofficedeutschland"
+  tags: ["Jobboard", "Passive Income", "HTML", "Tailwind"]
+  category: "Business"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "BeatForge Studio"
+  description: "Professioneller Music Visualizer mit Video-Export für Social Media"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/beatforge-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/beatforge-mobile.jpg"
+  url: "https://beko2210.github.io/BeatForge-Studio/"
+  tags: ["Music", "Visualizer", "React", "TypeScript", "PWA"]
+  category: "Music"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "Meet the Beat"
+  description: "Professional Audio Visualization Suite mit Premium Particle System"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/meetthebeat-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/meetthebeat-mobile.jpg"
+  url: "https://beko2210.github.io/Meet-the-Beat/"
+  tags: ["Audio", "Visualization", "Particles", "Music"]
+  category: "Music"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Belkis LLM Finetunes"
+  description: "Fine-Tuning-Experimente mit Unsloth & LLaMA für Consumer-GPUs"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/llm-finetunes-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/llm-finetunes-mobile.jpg"
+  url: "https://github.com/BEKO2210/belkis-llm-finetunes"
+  tags: ["AI", "Machine Learning", "LLaMA", "Unsloth", "Python"]
+  category: "AI"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "QuickBrief"
+  description: "Professionelle Musterbriefe in 30 Sekunden – DIN 5008 konform"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/quickbrief-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/quickbrief-mobile.jpg"
+  url: "https://beko2210.github.io/QuickBrief/"
+  tags: ["PWA", "Tools", "DIN 5008", "HTML"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Life Organizer"
+  description: "Lebenslanges Organisations-System für digitales & analoges Chaos"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/lifeorganizer-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/lifeorganizer-mobile.jpg"
+  url: "https://github.com/BEKO2210/life-organizer"
+  tags: ["Python", "Productivity", "Organization", "Automation"]
+  category: "Tools"
+  featured: false
+  size: "medium"
+  open_source: true
+
+- name: "Context Engineering"
+  description: "Advanced Context Engineering für LLMs"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/context-desktop.jpg"
+  url: "https://github.com/BEKO2210/Context-Engineering"
+  tags: ["AI", "Context", "TypeScript", "LLM"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "IdeaForge"
+  description: "Ideen-Entwicklung und Projektmanagement"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/ideaforge-desktop.jpg"
+  url: "https://github.com/BEKO2210/IdeaForge"
+  tags: ["JavaScript", "Productivity", "Ideas"]
+  category: "Tools"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Lyra Prompt Optimizer"
+  description: "Bring your Prompts to the next Level"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/lyra-desktop.jpg"
+  url: "https://github.com/BEKO2210/Lyra-Prompt-Optimizer"
+  tags: ["AI", "Prompts", "TypeScript", "Gemini"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Vokabel-go"
+  description: "Vokabel-App zum Lernen"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/vokabelgo-desktop.jpg"
+  url: "https://github.com/BEKO2210/Vokabel-go"
+  tags: ["JavaScript", "Education", "Learning"]
+  category: "Education"
+  featured: false
+  size: "small"
   open_source: true
