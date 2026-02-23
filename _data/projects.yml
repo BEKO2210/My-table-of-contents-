@@ -88,18 +88,6 @@
   size: "large"
   open_source: true
 
-- name: "Meet the Beat"
-  description: "Professional Audio Visualization Suite mit Premium Particle System"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/meetthebeat-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/meetthebeat-mobile.jpg"
-  url: "https://beko2210.github.io/Meet-the-Beat/"
-  tags: ["Audio", "Visualization", "Particles", "Music"]
-  category: "Music"
-  featured: true
-  size: "medium"
-  open_source: true
-
 - name: "Belkis LLM Finetunes"
   description: "Fine-Tuning-Experimente mit Unsloth & LLaMA für Consumer-GPUs"
   type: "project"
