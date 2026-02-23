@@ -157,7 +157,7 @@
   size: "small"
   open_source: true
 
-  - name: "Lyra Prompts"
+- name: "Lyra Prompts"
   description: "Strukturierte Prompt-Bibliothek und Optimizer für moderne KI-Workflows – über 300 Prompts für Creator, Entwickler und Automationen"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/lyra-prompts-desktop.jpg"
