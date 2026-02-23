@@ -84,7 +84,7 @@
   url: "https://beko2210.github.io/BeatForge-Studio/"
   tags: ["Music", "Visualizer", "React", "TypeScript", "PWA"]
   category: "Music"
-  featured: true
+  featured: false
   size: "large"
   open_source: true
 
@@ -96,7 +96,7 @@
   url: "https://github.com/BEKO2210/belkis-llm-finetunes"
   tags: ["AI", "Machine Learning", "LLaMA", "Unsloth", "Python"]
   category: "AI"
-  featured: true
+  featured: false
   size: "medium"
   open_source: true
 
