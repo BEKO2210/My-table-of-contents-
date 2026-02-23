@@ -22,7 +22,7 @@
   url: "https://beko2210.github.io/BEL-KI/index.html"
   tags: ["AI", "Innovation", "Web App"]
   category: "AI"
-  featured: true
+  featured: false
   size: "large"
   open_source: true
 
@@ -58,7 +58,7 @@
   url: "https://beko2210.github.io/gehaltsrechner"
   tags: ["PWA", "JavaScript", "Mobile-First", "FinTech"]
   category: "Code"
-  featured: false
+  featured: true
   size: "medium"
   open_source: true
 
@@ -72,7 +72,7 @@
   url: "https://beko2210.github.io/homeofficedeutschland"
   tags: ["Jobboard", "Passive Income", "HTML", "Tailwind"]
   category: "Business"
-  featured: true
+  featured: false
   size: "large"
   open_source: true
 
