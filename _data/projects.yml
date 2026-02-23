@@ -146,17 +146,6 @@
   size: "small"
   open_source: true
 
-- name: "Lyra Prompt Optimizer"
-  description: "Bring your Prompts to the next Level"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/lyra-desktop.jpg"
-  url: "https://github.com/BEKO2210/Lyra-Prompt-Optimizer"
-  tags: ["AI", "Prompts", "TypeScript", "Gemini"]
-  category: "AI"
-  featured: false
-  size: "small"
-  open_source: true
-
 - name: "Vokabel-go"
   description: "Vokabel-App zum Lernen"
   type: "project"
@@ -173,7 +162,7 @@
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/lyra-prompts-desktop.jpg"
   image_mobile: "/My-table-of-contents-/assets/images/projects/lyra-prompts-mobile.jpg"
-  url: "https://github.com/BEKO2210/lyra-prompts"
+  url: "https://beko2210.github.io/lyra-prompts/"
   tags: ["AI", "Prompts", "Workflow", "Automation", "Library"]
   category: "AI"
   featured: true
