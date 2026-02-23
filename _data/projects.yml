@@ -72,7 +72,7 @@
   url: "https://beko2210.github.io/homeofficedeutschland"
   tags: ["Jobboard", "Passive Income", "HTML", "Tailwind"]
   category: "Business"
-  featured: false
+  featured: true
   size: "large"
   open_source: true
 
