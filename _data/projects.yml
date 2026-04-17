@@ -193,7 +193,7 @@
 - name: "European Alternatives"
   description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.png"
   url: "https://github.com/BEKO2210/european-alternatives.eu-free-open-source"
   tags: ["FOSS", "Directory", "GDPR", "Astro"]
   category: "Tools"
