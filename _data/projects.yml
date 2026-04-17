@@ -1,18 +1,147 @@
 # Content Collection - Projekte, Musik, Bilder, Videos, PDFs, Texte
-# Format:
-# - name: Titel
-#   description: Beschreibung
-#   type: project/music/image/video/pdf/text (Typ des Contents)
-#   image: /My-table-of-contents-/assets/images/bild.jpg
-#   image_mobile: /My-table-of-contents-/assets/images/bild-mobile.jpg (optional)
-#   url: https://link-zum-content.de
-#   tags: [Tag1, Tag2, Tag3]
-#   category: AI/Design/Music/Art/Code (Kategorie)
-#   featured: true (optional - für hervorgehobene Items)
-#   size: small/medium/large (Grid-Größe, optional)
-#   open_source: true/false (optional - default: true)
+# Schema siehe CLAUDE.md §3
 
-# FEATURED PROJECTS
+# ============================================================
+# FEATURED (12) – Reihenfolge wie auf der Startseite
+# ============================================================
+
+- name: "KI-Entdecker"
+  description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.png"
+  url: "https://github.com/BEKO2210/KI-Entdecker"
+  tags: ["AI", "Education", "Kids", "TypeScript"]
+  category: "Education"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "World One 2.0"
+  description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.png"
+  url: "https://github.com/BEKO2210/World.One_v2.0"
+  tags: ["Dashboard", "Open Data", "JavaScript", "GitHub Actions"]
+  category: "Data"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "European Alternatives"
+  description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.png"
+  url: "https://github.com/BEKO2210/european-alternatives.eu-free-open-source"
+  tags: ["FOSS", "Directory", "GDPR", "Astro"]
+  category: "Tools"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "GitHub App Store"
+  description: "Kuratiertes App-Store-Frontend für GitHub-Projekte – Discovery, Kategorien, Direktinstallation"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/github-app-store-desktop.png"
+  url: "https://github.com/BEKO2210/GITHUB_APP_STORE"
+  tags: ["Astro", "PWA", "Directory", "GitHub"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "API Directory"
+  description: "Durchsuchbares Verzeichnis nützlicher und kostenloser APIs – nach Kategorie, Auth und Nutzung gefiltert"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/api-directory-desktop.png"
+  url: "https://github.com/BEKO2210/API_directory"
+  tags: ["Astro", "API", "Directory", "Tools"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Firstbrain"
+  description: "Second Brain Obsidian Edition – persönliches Knowledge-Management-System"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/firstbrain-desktop.svg"
+  url: "https://github.com/BEKO2210/Firstbrain"
+  tags: ["Obsidian", "PKM", "Productivity"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "PrepTrack"
+  description: "Offline-first PWA für Notfallvorsorge – Barcodes scannen, Haltbarkeit tracken, alles lokal, kein Tracking"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/preptrack-desktop.png"
+  url: "https://github.com/BEKO2210/Prepper_Log"
+  tags: ["PWA", "Offline", "Prepping", "Inventory"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Survival Kit"
+  description: "Notfall- & Krisenvorsorge PWA – komplett offline, digitaler Guide für den Ernstfall"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/survivalkit-desktop.png"
+  url: "https://github.com/BEKO2210/Survival_kit"
+  tags: ["PWA", "Offline", "Prepping"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Cricket Brain"
+  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.svg"
+  url: "https://github.com/BEKO2210/cricket-brain"
+  tags: ["AI", "Neuromorphic", "Research", "Rust"]
+  category: "AI"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "Lyra Prompts"
+  description: "Strukturierte Prompt-Bibliothek und Optimizer für moderne KI-Workflows – über 300 Prompts für Creator, Entwickler und Automationen"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/lyra-prompts-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/lyra-prompts-mobile.jpg"
+  url: "https://github.com/BEKO2210/lyra-prompts"
+  tags: ["AI", "Prompts", "Workflow", "Automation", "Library"]
+  category: "AI"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "QuickBrief"
+  description: "Professionelle Musterbriefe in 30 Sekunden – DIN 5008 konform"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/quickbrief-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/quickbrief-mobile.jpg"
+  url: "https://beko2210.github.io/QuickBrief/"
+  tags: ["PWA", "Tools", "DIN 5008", "HTML"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "MiroFish DE"
+  description: "Eigenständige deutschsprachige Weiterentwicklung von MiroFish – Deep-Learning-Tooling auf Python"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/mirofish-desktop.jpeg"
+  url: "https://github.com/BEKO2210/MiroFish-DE"
+  tags: ["AI", "Python", "Deep Learning"]
+  category: "AI"
+  featured: true
+  size: "medium"
+  open_source: true
+
+# ============================================================
+# NON-FEATURED – bestehende Einträge
+# ============================================================
 
 - name: "BEL-KI"
   description: "Innovative KI-Anwendung mit modernster Technologie"
@@ -74,41 +203,6 @@
   size: "large"
   open_source: true
 
-- name: "QuickBrief"
-  description: "Professionelle Musterbriefe in 30 Sekunden – DIN 5008 konform"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/quickbrief-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/quickbrief-mobile.jpg"
-  url: "https://beko2210.github.io/QuickBrief/"
-  tags: ["PWA", "Tools", "DIN 5008", "HTML"]
-  category: "Tools"
-  featured: true
-  size: "medium"
-  open_source: true
-
-- name: "Lyra Prompts"
-  description: "Strukturierte Prompt-Bibliothek und Optimizer für moderne KI-Workflows – über 300 Prompts für Creator, Entwickler und Automationen"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/lyra-prompts-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/lyra-prompts-mobile.jpg"
-  url: "https://beko2210.github.io/lyra-prompts/"
-  tags: ["AI", "Prompts", "Workflow", "Automation", "Library"]
-  category: "AI"
-  featured: true
-  size: "large"
-  open_source: true
-
-- name: "Cricket Brain"
-  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.svg"
-  url: "https://github.com/BEKO2210/cricket-brain"
-  tags: ["AI", "Neuromorphic", "Research", "Python"]
-  category: "AI"
-  featured: true
-  size: "large"
-  open_source: true
-
 - name: "ChartWave"
   description: "Global Music Charts PWA mit 30s Previews – Länder & Genres, täglich aktualisiert via GitHub Actions"
   type: "project"
@@ -117,50 +211,6 @@
   tags: ["PWA", "Music", "Astro", "TypeScript"]
   category: "Music"
   featured: false
-  size: "medium"
-  open_source: true
-
-- name: "World One 2.0"
-  description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.png"
-  url: "https://github.com/BEKO2210/World.One_v2.0"
-  tags: ["Dashboard", "Open Data", "JavaScript", "GitHub Actions"]
-  category: "Data"
-  featured: true
-  size: "large"
-  open_source: true
-
-- name: "KI-Entdecker"
-  description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.png"
-  url: "https://github.com/BEKO2210/KI-Entdecker"
-  tags: ["AI", "Education", "Kids", "TypeScript"]
-  category: "Education"
-  featured: true
-  size: "large"
-  open_source: true
-
-- name: "PrepTrack"
-  description: "Offline-first PWA für Notfallvorsorge – Barcodes scannen, Haltbarkeit tracken, alles lokal, kein Tracking"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/preptrack-desktop.png"
-  url: "https://github.com/BEKO2210/Prepper_Log"
-  tags: ["PWA", "Offline", "Prepping", "Inventory"]
-  category: "Tools"
-  featured: true
-  size: "medium"
-  open_source: true
-
-- name: "Survival Kit"
-  description: "Notfall- & Krisenvorsorge PWA – komplett offline, digitaler Guide für den Ernstfall"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/survivalkit-desktop.png"
-  url: "https://github.com/BEKO2210/Survival_kit"
-  tags: ["PWA", "Offline", "Prepping"]
-  category: "Tools"
-  featured: true
   size: "medium"
   open_source: true
 
@@ -173,28 +223,6 @@
   category: "Education"
   featured: false
   size: "medium"
-  open_source: true
-
-- name: "Firstbrain"
-  description: "Second Brain Obsidian Edition – persönliches Knowledge-Management-System"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/firstbrain-desktop.svg"
-  url: "https://github.com/BEKO2210/Firstbrain"
-  tags: ["Obsidian", "PKM", "Productivity"]
-  category: "Tools"
-  featured: true
-  size: "medium"
-  open_source: true
-
-- name: "European Alternatives"
-  description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.png"
-  url: "https://github.com/BEKO2210/european-alternatives.eu-free-open-source"
-  tags: ["FOSS", "Directory", "GDPR", "Astro"]
-  category: "Tools"
-  featured: true
-  size: "large"
   open_source: true
 
 - name: "FuelFinder Pro"
