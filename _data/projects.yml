@@ -138,7 +138,7 @@
 - name: "KI-Entdecker"
   description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.png"
   url: "https://github.com/BEKO2210/KI-Entdecker"
   tags: ["AI", "Education", "Kids", "TypeScript"]
   category: "Education"
