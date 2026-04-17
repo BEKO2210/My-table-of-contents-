@@ -87,18 +87,12 @@ Kategorien: `bug` · `feature` · `maintenance` · `consistency` · `perf` · `d
 
 ### Offen
 <!-- Neueste oben. -->
-- [ ] 2026-04-17 · docs · README/ANLEITUNG auf Aktualität prüfen nach Projekt-Cleanup
-      Detail: Enthalten keine entfernten Projekte, aber Projekt-Zählungen & Feature-Listen könnten veraltet sein.
-      Betrifft: `README.md`, `ANLEITUNG.md`
-- [ ] 2026-04-17 · consistency · Stale Kommentar in `projects.yml`
-      Detail: `# NEW PROJECTS - To be added with images` stimmt nicht mehr, alle haben jetzt Bilder.
-      Betrifft: `_data/projects.yml`
-- [ ] 2026-04-17 · perf · KI-Entdecker `robot-hero.png` ist 1,6 MB
-      Detail: Deutlich über Soll-Grenze 500 KB. Komprimieren (pngquant/oxipng) oder kleineres Asset wählen.
-      Betrifft: `assets/images/projects/ki-entdecker-desktop.png`
 
 ### Erledigt
 <!-- Format: - [x] Datum · Kat · Zeile (<commit-hash>) -->
+- [x] 2026-04-17 · docs · README/ANLEITUNG/SCHNELLSTART auf Aktualität gebracht nach Projekt-Cleanup (`7bf20d4`)
+- [x] 2026-04-17 · consistency · Stale Kommentare in `projects.yml` entfernt (`7bf20d4`)
+- [x] 2026-04-17 · perf · KI-Entdecker-Bild von 1,6 MB auf 100 KB komprimiert (`7bf20d4`)
 
 ## 7. Konsistenz-Checkliste (vor jedem Commit/Push)
 - [ ] YAML valide (keine Tab-Einrückung, Quotes konsistent)
@@ -111,9 +105,9 @@ Kategorien: `bug` · `feature` · `maintenance` · `consistency` · `perf` · `d
 Quick-Check aus dem Repo-Root:
 ```bash
 # orphan-check
-comm -23 <(ls assets/images/projects | sort) <(grep -oE '[a-z0-9-]+(-desktop|-mobile|\.[a-z]+)' _data/projects.yml | sort -u)
-# featured count
-grep -c 'featured: true' _data/projects.yml   # Erwartung: 9
+comm -23 <(ls assets/images/projects | sort) <(grep -oE '[a-z0-9.-]+\.(jpg|png|svg|gif|webp)' _data/projects.yml | sort -u)
+# featured count (nur echte YAML-Einträge, nicht Schema-Kommentar)
+grep -c '^  featured: true' _data/projects.yml   # Erwartung: 9
 ```
 
 ## 8. Commits & Historie
