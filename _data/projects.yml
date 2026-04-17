@@ -9,7 +9,7 @@
   description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.png"
-  url: "https://github.com/BEKO2210/KI-Entdecker"
+  url: "https://beko2210.github.io/KI-Entdecker/"
   tags: ["AI", "Education", "Kids", "TypeScript"]
   category: "Education"
   featured: true
@@ -20,7 +20,7 @@
   description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.png"
-  url: "https://github.com/BEKO2210/World.One_v2.0"
+  url: "https://beko2210.github.io/World.One_v2.0/"
   tags: ["Dashboard", "Open Data", "JavaScript", "GitHub Actions"]
   category: "Data"
   featured: true
@@ -31,7 +31,7 @@
   description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.png"
-  url: "https://github.com/BEKO2210/european-alternatives.eu-free-open-source"
+  url: "https://beko2210.github.io/european-alternatives.eu-free-open-source/"
   tags: ["FOSS", "Directory", "GDPR", "Astro"]
   category: "Tools"
   featured: true
@@ -42,7 +42,7 @@
   description: "Kuratiertes App-Store-Frontend für GitHub-Projekte – Discovery, Kategorien, Direktinstallation"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/github-app-store-desktop.png"
-  url: "https://github.com/BEKO2210/GITHUB_APP_STORE"
+  url: "https://beko2210.github.io/GITHUB_APP_STORE/"
   tags: ["Astro", "PWA", "Directory", "GitHub"]
   category: "Tools"
   featured: true
@@ -53,7 +53,7 @@
   description: "Durchsuchbares Verzeichnis nützlicher und kostenloser APIs – nach Kategorie, Auth und Nutzung gefiltert"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/api-directory-desktop.png"
-  url: "https://github.com/BEKO2210/API_directory"
+  url: "https://beko2210.github.io/API_directory/"
   tags: ["Astro", "API", "Directory", "Tools"]
   category: "Tools"
   featured: true
@@ -75,7 +75,7 @@
   description: "Offline-first PWA für Notfallvorsorge – Barcodes scannen, Haltbarkeit tracken, alles lokal, kein Tracking"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/preptrack-desktop.png"
-  url: "https://github.com/BEKO2210/Prepper_Log"
+  url: "https://beko2210.github.io/Prepper_Log/"
   tags: ["PWA", "Offline", "Prepping", "Inventory"]
   category: "Tools"
   featured: true
@@ -86,7 +86,7 @@
   description: "Notfall- & Krisenvorsorge PWA – komplett offline, digitaler Guide für den Ernstfall"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/survivalkit-desktop.png"
-  url: "https://github.com/BEKO2210/Survival_kit"
+  url: "https://beko2210.github.io/Survival_kit/"
   tags: ["PWA", "Offline", "Prepping"]
   category: "Tools"
   featured: true
@@ -97,7 +97,7 @@
   description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.svg"
-  url: "https://github.com/BEKO2210/cricket-brain"
+  url: "https://beko2210.github.io/cricket-brain/"
   tags: ["AI", "Neuromorphic", "Research", "Rust"]
   category: "AI"
   featured: true
@@ -109,7 +109,7 @@
   type: "project"
   image: "/My-table-of-contents-/assets/images/projects/lyra-prompts-desktop.jpg"
   image_mobile: "/My-table-of-contents-/assets/images/projects/lyra-prompts-mobile.jpg"
-  url: "https://github.com/BEKO2210/lyra-prompts"
+  url: "https://beko2210.github.io/lyra-prompts/"
   tags: ["AI", "Prompts", "Workflow", "Automation", "Library"]
   category: "AI"
   featured: true
