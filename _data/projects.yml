@@ -168,3 +168,159 @@
   featured: true
   size: "large"
   open_source: true
+
+# NEW: Projekte aus anderen Repos (Icons aus README / GitHub Social Preview)
+
+- name: "World One 2.0"
+  description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.jpg"
+  url: "https://github.com/BEKO2210/World.One_v2.0"
+  tags: ["Dashboard", "Open Data", "JavaScript", "GitHub Actions"]
+  category: "Data"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "KI-Entdecker"
+  description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.jpg"
+  url: "https://github.com/BEKO2210/KI-Entdecker"
+  tags: ["AI", "Education", "Kids", "TypeScript"]
+  category: "Education"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "PrepTrack"
+  description: "Offline-first PWA für Notfallvorsorge – Barcodes scannen, Haltbarkeit tracken, alles lokal, kein Tracking"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/preptrack-desktop.png"
+  url: "https://github.com/BEKO2210/Prepper_Log"
+  tags: ["PWA", "Offline", "Prepping", "Inventory"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Survival Kit"
+  description: "Notfall- & Krisenvorsorge PWA – komplett offline, digitaler Guide für den Ernstfall"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/survivalkit-desktop.png"
+  url: "https://github.com/BEKO2210/Survival_kit"
+  tags: ["PWA", "Offline", "Prepping"]
+  category: "Tools"
+  featured: false
+  size: "medium"
+  open_source: true
+
+- name: "Vokabeltrainer+"
+  description: "Moderner, leistungsstarker Vokabeltrainer als Progressive Web App"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/vokabeltrainer-desktop.jpg"
+  url: "https://github.com/BEKO2210/Vokabeltrainer"
+  tags: ["PWA", "Education", "Learning", "CSS"]
+  category: "Education"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Firstbrain"
+  description: "Second Brain Obsidian Edition – persönliches Knowledge-Management-System"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/firstbrain-desktop.svg"
+  url: "https://github.com/BEKO2210/Firstbrain"
+  tags: ["Obsidian", "PKM", "Productivity"]
+  category: "Tools"
+  featured: false
+  size: "medium"
+  open_source: true
+
+- name: "Cricket Brain"
+  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.jpg"
+  url: "https://github.com/BEKO2210/cricket-brain"
+  tags: ["AI", "Neuromorphic", "Research", "Python"]
+  category: "AI"
+  featured: false
+  size: "medium"
+  open_source: true
+
+- name: "European Alternatives"
+  description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.jpg"
+  url: "https://github.com/BEKO2210/european-alternatives.eu-free-open-source"
+  tags: ["FOSS", "Directory", "GDPR", "Astro"]
+  category: "Tools"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "ChartWave"
+  description: "Global Music Charts PWA mit 30s Previews – Länder & Genres, täglich aktualisiert via GitHub Actions"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/chartwave-desktop.jpg"
+  url: "https://github.com/BEKO2210/ChartWave-Global-Music-Charts-PWA"
+  tags: ["PWA", "Music", "Astro", "TypeScript"]
+  category: "Music"
+  featured: false
+  size: "medium"
+  open_source: true
+
+- name: "FuelFinder Pro"
+  description: "Tankstellen-Preis-App mit Net-Saving-Logik – berücksichtigt Umweg-Kosten, nicht nur den niedrigsten Preis"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/fuelfinder-desktop.jpg"
+  url: "https://github.com/BEKO2210/FuelFinder-Pro"
+  tags: ["PWA", "TypeScript", "Maps", "Tools"]
+  category: "Tools"
+  featured: false
+  size: "medium"
+  open_source: true
+
+- name: "Code-Universum"
+  description: "Open-Source UI-Component & Website Sharing Platform – Upload, Preview, Share"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/codeuniversum-desktop.jpg"
+  url: "https://github.com/BEKO2210/Code-Universum"
+  tags: ["UI", "Components", "Community", "TypeScript"]
+  category: "Code"
+  featured: false
+  size: "medium"
+  open_source: true
+
+- name: "Freiberg Weather"
+  description: "Wetter-App für Freiberg am Neckar"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/freiberg-desktop.jpg"
+  url: "https://github.com/BEKO2210/freiberg-weather"
+  tags: ["Weather", "React", "TypeScript"]
+  category: "Tools"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Control Center"
+  description: "AI-Agent-Orchestrierung – Dashboard für Agenten, Tasks, Content-Pipelines, Scheduling, Memory"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/controlcenter-desktop.jpg"
+  url: "https://github.com/BEKO2210/Control-Center"
+  tags: ["AI", "Agents", "Dashboard", "TypeScript"]
+  category: "AI"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "Local LLM Swarm"
+  description: "Hierarchisches Multi-Agent-LLM-System für kleine GGUF-Modelle auf Consumer-GPUs"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/llmswarm-desktop.png"
+  url: "https://github.com/BEKO2210/local-llm-swarm"
+  tags: ["AI", "LLM", "Multi-Agent", "GGUF"]
+  category: "AI"
+  featured: false
+  size: "medium"
+  open_source: true
