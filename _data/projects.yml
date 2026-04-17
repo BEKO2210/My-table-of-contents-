@@ -34,7 +34,7 @@
   url: "https://ua8k4athbds1.space.minimax.io/"
   tags: ["Experiment", "Innovation", "Digital Art"]
   category: "Art"
-  featured: true
+  featured: false
   size: "large"
   open_source: true
 
@@ -46,7 +46,7 @@
   url: "https://open.spotify.com/intl-de/artist/6hC138hN2HuSbZqIwkyJRe?si=lH0eh7joT92PEYY4YEO1Qw"
   tags: ["Cover", "Musik", "Produktion"]
   category: "Music"
-  featured: true
+  featured: false
   size: "medium"
   open_source: false
 
@@ -58,23 +58,11 @@
   url: "https://beko2210.github.io/gehaltsrechner"
   tags: ["PWA", "JavaScript", "Mobile-First", "FinTech"]
   category: "Code"
-  featured: true
+  featured: false
   size: "medium"
   open_source: true
 
 # NEW PROJECTS - To be added with images
-
-- name: "HomeOfficeDeutschland"
-  description: "Remote Jobboard für Deutschland – passive Einkommensstrategie"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/homeofficedeutschland-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/homeofficedeutschland-mobile.jpg"
-  url: "https://beko2210.github.io/homeofficedeutschland"
-  tags: ["Jobboard", "Passive Income", "HTML", "Tailwind"]
-  category: "Business"
-  featured: true
-  size: "large"
-  open_source: true
 
 - name: "BeatForge Studio"
   description: "Professioneller Music Visualizer mit Video-Export für Social Media"
@@ -86,18 +74,6 @@
   category: "Music"
   featured: false
   size: "large"
-  open_source: true
-
-- name: "Belkis LLM Finetunes"
-  description: "Fine-Tuning-Experimente mit Unsloth & LLaMA für Consumer-GPUs"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/llm-finetunes-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/llm-finetunes-mobile.jpg"
-  url: "https://github.com/BEKO2210/belkis-llm-finetunes"
-  tags: ["AI", "Machine Learning", "LLaMA", "Unsloth", "Python"]
-  category: "AI"
-  featured: false
-  size: "medium"
   open_source: true
 
 - name: "QuickBrief"
@@ -144,7 +120,7 @@
   url: "https://github.com/BEKO2210/ChartWave-Global-Music-Charts-PWA"
   tags: ["PWA", "Music", "Astro", "TypeScript"]
   category: "Music"
-  featured: true
+  featured: false
   size: "medium"
   open_source: true
 
@@ -188,7 +164,7 @@
   url: "https://github.com/BEKO2210/Survival_kit"
   tags: ["PWA", "Offline", "Prepping"]
   category: "Tools"
-  featured: false
+  featured: true
   size: "medium"
   open_source: true
 
@@ -199,7 +175,7 @@
   url: "https://github.com/BEKO2210/Vokabeltrainer"
   tags: ["PWA", "Education", "Learning", "CSS"]
   category: "Education"
-  featured: true
+  featured: false
   size: "medium"
   open_source: true
 
@@ -210,7 +186,7 @@
   url: "https://github.com/BEKO2210/Firstbrain"
   tags: ["Obsidian", "PKM", "Productivity"]
   category: "Tools"
-  featured: false
+  featured: true
   size: "medium"
   open_source: true
 
@@ -236,17 +212,6 @@
   size: "medium"
   open_source: true
 
-- name: "Code-Universum"
-  description: "Open-Source UI-Component & Website Sharing Platform – Upload, Preview, Share"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/codeuniversum-desktop.jpg"
-  url: "https://github.com/BEKO2210/Code-Universum"
-  tags: ["UI", "Components", "Community", "TypeScript"]
-  category: "Code"
-  featured: false
-  size: "medium"
-  open_source: true
-
 - name: "Freiberg Weather"
   description: "Wetter-App für Freiberg am Neckar"
   type: "project"
@@ -265,7 +230,7 @@
   url: "https://github.com/BEKO2210/Control-Center"
   tags: ["AI", "Agents", "Dashboard", "TypeScript"]
   category: "AI"
-  featured: true
+  featured: false
   size: "large"
   open_source: true
 
