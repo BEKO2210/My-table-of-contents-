@@ -62,8 +62,6 @@
   size: "medium"
   open_source: true
 
-# NEW PROJECTS - To be added with images
-
 - name: "BeatForge Studio"
   description: "Professioneller Music Visualizer mit Video-Export für Social Media"
   type: "project"
@@ -99,8 +97,6 @@
   featured: true
   size: "large"
   open_source: true
-
-# NEW: Projekte aus anderen Repos (Icons aus README / GitHub Social Preview)
 
 - name: "Cricket Brain"
   description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"

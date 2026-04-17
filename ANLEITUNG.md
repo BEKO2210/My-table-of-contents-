@@ -30,7 +30,7 @@ Jetzt siehst du die GitHub Pages Einstellungen:
 - **Source**: Lass "Deploy from a branch" ausgewählt
 - **Branch**: Hier ist wichtig!
   - Klicke auf das Dropdown (steht wahrscheinlich "None")
-  - Wähle **`claude/jekyll-portfolio-setup-Pid7B`** aus
+  - Wähle **`main`** aus
   - Bei "Folder" wähle **`/ (root)`**
   - Klicke auf **"Save"**
 
@@ -58,7 +58,7 @@ https://BEKO2210.github.io/My-table-of-contents-/
 Deine Portfolio-Seite mit:
 - ✨ Modernem Design mit Gradient-Effekten
 - 🚀 Hero-Section mit deinem Namen
-- 📁 3 Beispiel-Projekte (K.Ai Modell, Songtexte App, Portfolio)
+- 📁 Deine Projekte aus `_data/projects.yml`
 - 📊 Statistik-Section
 - 💬 Kontakt-Bereich
 
@@ -85,7 +85,7 @@ Deine Portfolio-Seite mit:
 ## ❓ Probleme?
 
 ### "Ich finde den Branch nicht"
-- Der Branch heißt: `claude/jekyll-portfolio-setup-Pid7B`
+- Der Branch heißt: `main`
 - Er sollte im Dropdown sichtbar sein
 
 ### "Die Seite zeigt 404"
