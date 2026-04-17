@@ -171,7 +171,7 @@
 - name: "Vokabeltrainer+"
   description: "Moderner, leistungsstarker Vokabeltrainer als Progressive Web App"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/vokabeltrainer-desktop.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/vokabeltrainer-desktop.svg"
   url: "https://github.com/BEKO2210/Vokabeltrainer"
   tags: ["PWA", "Education", "Learning", "CSS"]
   category: "Education"
