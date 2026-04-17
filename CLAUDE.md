@@ -64,9 +64,10 @@ Niemals direkt auf `main`. Immer auf dem von der Session vorgegebenen `claude/<t
 `git push -u origin <branch>`. Kein Force-Push. Keine PR ohne explizite Aufforderung.
 
 ## 5. Aktueller Zustand (Cache)
-- **20 Projekte** in `projects.yml`, davon **9 featured**.
-- **Featured (Reihenfolge im File):** QuickBrief, Lyra Prompts, Cricket Brain, World One 2.0, KI-Entdecker, PrepTrack, Survival Kit, Firstbrain, European Alternatives.
-- **Removed (nicht wieder aufnehmen ohne Nachfrage):** Life Organizer, Context Engineering, IdeaForge, Vokabel-go, HomeOfficeDeutschland, Belkis LLM Finetunes, Code-Universum.
+- **109 Projekte** in `projects.yml`, davon **12 featured**.
+- **Featured (Reihenfolge im File):** KI-Entdecker, World One 2.0, European Alternatives, GitHub App Store, API Directory, Firstbrain, PrepTrack, Survival Kit, Cricket Brain, Lyra Prompts, QuickBrief, MiroFish DE.
+- **Non-Featured** umfasst den vollständigen Bestand aller öffentlichen BEKO2210-Repos (ohne private/archivierte). Bildquelle für massenhaft angelegte Repos: GitHub OpenGraph (`https://opengraph.githubassets.com/1/BEKO2210/<repo>`), extern geladen – nicht lokal abgelegt.
+- **Hinweis:** Die frühere „genau 9 featured" Regel wurde auf Wunsch auf **12** angehoben. Konsistenz-Check in §7 entsprechend angepasst.
 
 > Diesen Abschnitt nach jedem strukturellen Change (Projekt hinzu/raus, Featured-Wechsel) aktualisieren.
 
@@ -96,9 +97,9 @@ Kategorien: `bug` · `feature` · `maintenance` · `consistency` · `perf` · `d
 
 ## 7. Konsistenz-Checkliste (vor jedem Commit/Push)
 - [ ] YAML valide (keine Tab-Einrückung, Quotes konsistent)
-- [ ] Jeder `image:`-Pfad in `projects.yml` existiert auf Platte
+- [ ] Jeder **lokale** `image:`-Pfad in `projects.yml` existiert auf Platte (externe `https://`-URLs sind erlaubt und werden nicht geprüft)
 - [ ] Keine Waisen-Bilder in `assets/images/projects/` (ohne YAML-Referenz)
-- [ ] Genau **9** Einträge mit `featured: true`
+- [ ] Genau **12** Einträge mit `featured: true`
 - [ ] README/ANLEITUNG/SCHNELLSTART noch stimmig
 - [ ] Commit auf richtigem Branch, Message deutsch + aussagekräftig
 
@@ -107,7 +108,7 @@ Quick-Check aus dem Repo-Root:
 # orphan-check
 comm -23 <(ls assets/images/projects | sort) <(grep -oE '[a-z0-9.-]+\.(jpg|png|svg|gif|webp)' _data/projects.yml | sort -u)
 # featured count (nur echte YAML-Einträge, nicht Schema-Kommentar)
-grep -c '^  featured: true' _data/projects.yml   # Erwartung: 9
+grep -c '^  featured: true' _data/projects.yml   # Erwartung: 12
 ```
 
 ## 8. Commits & Historie
