@@ -112,51 +112,6 @@
   size: "medium"
   open_source: true
 
-- name: "Life Organizer"
-  description: "Lebenslanges Organisations-System für digitales & analoges Chaos"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/lifeorganizer-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/lifeorganizer-mobile.jpg"
-  url: "https://github.com/BEKO2210/life-organizer"
-  tags: ["Python", "Productivity", "Organization", "Automation"]
-  category: "Tools"
-  featured: false
-  size: "medium"
-  open_source: true
-
-- name: "Context Engineering"
-  description: "Advanced Context Engineering für LLMs"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/context-desktop.jpg"
-  url: "https://github.com/BEKO2210/Context-Engineering"
-  tags: ["AI", "Context", "TypeScript", "LLM"]
-  category: "AI"
-  featured: false
-  size: "small"
-  open_source: true
-
-- name: "IdeaForge"
-  description: "Ideen-Entwicklung und Projektmanagement"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/ideaforge-desktop.jpg"
-  url: "https://github.com/BEKO2210/IdeaForge"
-  tags: ["JavaScript", "Productivity", "Ideas"]
-  category: "Tools"
-  featured: false
-  size: "small"
-  open_source: true
-
-- name: "Vokabel-go"
-  description: "Vokabel-App zum Lernen"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/vokabelgo-desktop.jpg"
-  url: "https://github.com/BEKO2210/Vokabel-go"
-  tags: ["JavaScript", "Education", "Learning"]
-  category: "Education"
-  featured: false
-  size: "small"
-  open_source: true
-
 - name: "Lyra Prompts"
   description: "Strukturierte Prompt-Bibliothek und Optimizer für moderne KI-Workflows – über 300 Prompts für Creator, Entwickler und Automationen"
   type: "project"
@@ -170,6 +125,28 @@
   open_source: true
 
 # NEW: Projekte aus anderen Repos (Icons aus README / GitHub Social Preview)
+
+- name: "Cricket Brain"
+  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.svg"
+  url: "https://github.com/BEKO2210/cricket-brain"
+  tags: ["AI", "Neuromorphic", "Research", "Python"]
+  category: "AI"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "ChartWave"
+  description: "Global Music Charts PWA mit 30s Previews – Länder & Genres, täglich aktualisiert via GitHub Actions"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/chartwave-desktop.svg"
+  url: "https://github.com/BEKO2210/ChartWave-Global-Music-Charts-PWA"
+  tags: ["PWA", "Music", "Astro", "TypeScript"]
+  category: "Music"
+  featured: true
+  size: "medium"
+  open_source: true
 
 - name: "World One 2.0"
   description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
@@ -237,17 +214,6 @@
   size: "medium"
   open_source: true
 
-- name: "Cricket Brain"
-  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.jpg"
-  url: "https://github.com/BEKO2210/cricket-brain"
-  tags: ["AI", "Neuromorphic", "Research", "Python"]
-  category: "AI"
-  featured: false
-  size: "medium"
-  open_source: true
-
 - name: "European Alternatives"
   description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
   type: "project"
@@ -257,17 +223,6 @@
   category: "Tools"
   featured: true
   size: "large"
-  open_source: true
-
-- name: "ChartWave"
-  description: "Global Music Charts PWA mit 30s Previews – Länder & Genres, täglich aktualisiert via GitHub Actions"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/chartwave-desktop.jpg"
-  url: "https://github.com/BEKO2210/ChartWave-Global-Music-Charts-PWA"
-  tags: ["PWA", "Music", "Astro", "TypeScript"]
-  category: "Music"
-  featured: false
-  size: "medium"
   open_source: true
 
 - name: "FuelFinder Pro"
