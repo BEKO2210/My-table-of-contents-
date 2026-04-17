@@ -34,7 +34,7 @@
   url: "https://ua8k4athbds1.space.minimax.io/"
   tags: ["Experiment", "Innovation", "Digital Art"]
   category: "Art"
-  featured: true
+  featured: false
   size: "large"
   open_source: true
 
@@ -46,7 +46,7 @@
   url: "https://open.spotify.com/intl-de/artist/6hC138hN2HuSbZqIwkyJRe?si=lH0eh7joT92PEYY4YEO1Qw"
   tags: ["Cover", "Musik", "Produktion"]
   category: "Music"
-  featured: true
+  featured: false
   size: "medium"
   open_source: false
 
@@ -58,23 +58,11 @@
   url: "https://beko2210.github.io/gehaltsrechner"
   tags: ["PWA", "JavaScript", "Mobile-First", "FinTech"]
   category: "Code"
-  featured: true
+  featured: false
   size: "medium"
   open_source: true
 
 # NEW PROJECTS - To be added with images
-
-- name: "HomeOfficeDeutschland"
-  description: "Remote Jobboard für Deutschland – passive Einkommensstrategie"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/homeofficedeutschland-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/homeofficedeutschland-mobile.jpg"
-  url: "https://beko2210.github.io/homeofficedeutschland"
-  tags: ["Jobboard", "Passive Income", "HTML", "Tailwind"]
-  category: "Business"
-  featured: true
-  size: "large"
-  open_source: true
 
 - name: "BeatForge Studio"
   description: "Professioneller Music Visualizer mit Video-Export für Social Media"
@@ -86,18 +74,6 @@
   category: "Music"
   featured: false
   size: "large"
-  open_source: true
-
-- name: "Belkis LLM Finetunes"
-  description: "Fine-Tuning-Experimente mit Unsloth & LLaMA für Consumer-GPUs"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/llm-finetunes-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/llm-finetunes-mobile.jpg"
-  url: "https://github.com/BEKO2210/belkis-llm-finetunes"
-  tags: ["AI", "Machine Learning", "LLaMA", "Unsloth", "Python"]
-  category: "AI"
-  featured: false
-  size: "medium"
   open_source: true
 
 - name: "QuickBrief"
@@ -144,14 +120,14 @@
   url: "https://github.com/BEKO2210/ChartWave-Global-Music-Charts-PWA"
   tags: ["PWA", "Music", "Astro", "TypeScript"]
   category: "Music"
-  featured: true
+  featured: false
   size: "medium"
   open_source: true
 
 - name: "World One 2.0"
   description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.png"
   url: "https://github.com/BEKO2210/World.One_v2.0"
   tags: ["Dashboard", "Open Data", "JavaScript", "GitHub Actions"]
   category: "Data"
@@ -162,7 +138,7 @@
 - name: "KI-Entdecker"
   description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.png"
   url: "https://github.com/BEKO2210/KI-Entdecker"
   tags: ["AI", "Education", "Kids", "TypeScript"]
   category: "Education"
@@ -188,18 +164,18 @@
   url: "https://github.com/BEKO2210/Survival_kit"
   tags: ["PWA", "Offline", "Prepping"]
   category: "Tools"
-  featured: false
+  featured: true
   size: "medium"
   open_source: true
 
 - name: "Vokabeltrainer+"
   description: "Moderner, leistungsstarker Vokabeltrainer als Progressive Web App"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/vokabeltrainer-desktop.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/vokabeltrainer-desktop.svg"
   url: "https://github.com/BEKO2210/Vokabeltrainer"
   tags: ["PWA", "Education", "Learning", "CSS"]
   category: "Education"
-  featured: true
+  featured: false
   size: "medium"
   open_source: true
 
@@ -210,14 +186,14 @@
   url: "https://github.com/BEKO2210/Firstbrain"
   tags: ["Obsidian", "PKM", "Productivity"]
   category: "Tools"
-  featured: false
+  featured: true
   size: "medium"
   open_source: true
 
 - name: "European Alternatives"
   description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.png"
   url: "https://github.com/BEKO2210/european-alternatives.eu-free-open-source"
   tags: ["FOSS", "Directory", "GDPR", "Astro"]
   category: "Tools"
@@ -232,17 +208,6 @@
   url: "https://github.com/BEKO2210/FuelFinder-Pro"
   tags: ["PWA", "TypeScript", "Maps", "Tools"]
   category: "Tools"
-  featured: false
-  size: "medium"
-  open_source: true
-
-- name: "Code-Universum"
-  description: "Open-Source UI-Component & Website Sharing Platform – Upload, Preview, Share"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/codeuniversum-desktop.jpg"
-  url: "https://github.com/BEKO2210/Code-Universum"
-  tags: ["UI", "Components", "Community", "TypeScript"]
-  category: "Code"
   featured: false
   size: "medium"
   open_source: true
@@ -265,7 +230,7 @@
   url: "https://github.com/BEKO2210/Control-Center"
   tags: ["AI", "Agents", "Dashboard", "TypeScript"]
   category: "AI"
-  featured: true
+  featured: false
   size: "large"
   open_source: true
 
