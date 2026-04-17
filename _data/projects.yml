@@ -1,18 +1,147 @@
 # Content Collection - Projekte, Musik, Bilder, Videos, PDFs, Texte
-# Format:
-# - name: Titel
-#   description: Beschreibung
-#   type: project/music/image/video/pdf/text (Typ des Contents)
-#   image: /My-table-of-contents-/assets/images/bild.jpg
-#   image_mobile: /My-table-of-contents-/assets/images/bild-mobile.jpg (optional)
-#   url: https://link-zum-content.de
-#   tags: [Tag1, Tag2, Tag3]
-#   category: AI/Design/Music/Art/Code (Kategorie)
-#   featured: true (optional - für hervorgehobene Items)
-#   size: small/medium/large (Grid-Größe, optional)
-#   open_source: true/false (optional - default: true)
+# Schema siehe CLAUDE.md §3
 
-# FEATURED PROJECTS
+# ============================================================
+# FEATURED (12) – Reihenfolge wie auf der Startseite
+# ============================================================
+
+- name: "KI-Entdecker"
+  description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.png"
+  url: "https://github.com/BEKO2210/KI-Entdecker"
+  tags: ["AI", "Education", "Kids", "TypeScript"]
+  category: "Education"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "World One 2.0"
+  description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.png"
+  url: "https://github.com/BEKO2210/World.One_v2.0"
+  tags: ["Dashboard", "Open Data", "JavaScript", "GitHub Actions"]
+  category: "Data"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "European Alternatives"
+  description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.png"
+  url: "https://github.com/BEKO2210/european-alternatives.eu-free-open-source"
+  tags: ["FOSS", "Directory", "GDPR", "Astro"]
+  category: "Tools"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "GitHub App Store"
+  description: "Kuratiertes App-Store-Frontend für GitHub-Projekte – Discovery, Kategorien, Direktinstallation"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/github-app-store-desktop.png"
+  url: "https://github.com/BEKO2210/GITHUB_APP_STORE"
+  tags: ["Astro", "PWA", "Directory", "GitHub"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "API Directory"
+  description: "Durchsuchbares Verzeichnis nützlicher und kostenloser APIs – nach Kategorie, Auth und Nutzung gefiltert"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/api-directory-desktop.png"
+  url: "https://github.com/BEKO2210/API_directory"
+  tags: ["Astro", "API", "Directory", "Tools"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Firstbrain"
+  description: "Second Brain Obsidian Edition – persönliches Knowledge-Management-System"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/firstbrain-desktop.svg"
+  url: "https://github.com/BEKO2210/Firstbrain"
+  tags: ["Obsidian", "PKM", "Productivity"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "PrepTrack"
+  description: "Offline-first PWA für Notfallvorsorge – Barcodes scannen, Haltbarkeit tracken, alles lokal, kein Tracking"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/preptrack-desktop.png"
+  url: "https://github.com/BEKO2210/Prepper_Log"
+  tags: ["PWA", "Offline", "Prepping", "Inventory"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Survival Kit"
+  description: "Notfall- & Krisenvorsorge PWA – komplett offline, digitaler Guide für den Ernstfall"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/survivalkit-desktop.png"
+  url: "https://github.com/BEKO2210/Survival_kit"
+  tags: ["PWA", "Offline", "Prepping"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Cricket Brain"
+  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.svg"
+  url: "https://github.com/BEKO2210/cricket-brain"
+  tags: ["AI", "Neuromorphic", "Research", "Rust"]
+  category: "AI"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "Lyra Prompts"
+  description: "Strukturierte Prompt-Bibliothek und Optimizer für moderne KI-Workflows – über 300 Prompts für Creator, Entwickler und Automationen"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/lyra-prompts-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/lyra-prompts-mobile.jpg"
+  url: "https://github.com/BEKO2210/lyra-prompts"
+  tags: ["AI", "Prompts", "Workflow", "Automation", "Library"]
+  category: "AI"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "QuickBrief"
+  description: "Professionelle Musterbriefe in 30 Sekunden – DIN 5008 konform"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/quickbrief-desktop.jpg"
+  image_mobile: "/My-table-of-contents-/assets/images/projects/quickbrief-mobile.jpg"
+  url: "https://beko2210.github.io/QuickBrief/"
+  tags: ["PWA", "Tools", "DIN 5008", "HTML"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "MiroFish DE"
+  description: "Eigenständige deutschsprachige Weiterentwicklung von MiroFish – Deep-Learning-Tooling auf Python"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/mirofish-desktop.jpeg"
+  url: "https://github.com/BEKO2210/MiroFish-DE"
+  tags: ["AI", "Python", "Deep Learning"]
+  category: "AI"
+  featured: true
+  size: "medium"
+  open_source: true
+
+# ============================================================
+# NON-FEATURED – bestehende Einträge
+# ============================================================
 
 - name: "BEL-KI"
   description: "Innovative KI-Anwendung mit modernster Technologie"
@@ -74,41 +203,6 @@
   size: "large"
   open_source: true
 
-- name: "QuickBrief"
-  description: "Professionelle Musterbriefe in 30 Sekunden – DIN 5008 konform"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/quickbrief-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/quickbrief-mobile.jpg"
-  url: "https://beko2210.github.io/QuickBrief/"
-  tags: ["PWA", "Tools", "DIN 5008", "HTML"]
-  category: "Tools"
-  featured: true
-  size: "medium"
-  open_source: true
-
-- name: "Lyra Prompts"
-  description: "Strukturierte Prompt-Bibliothek und Optimizer für moderne KI-Workflows – über 300 Prompts für Creator, Entwickler und Automationen"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/lyra-prompts-desktop.jpg"
-  image_mobile: "/My-table-of-contents-/assets/images/projects/lyra-prompts-mobile.jpg"
-  url: "https://beko2210.github.io/lyra-prompts/"
-  tags: ["AI", "Prompts", "Workflow", "Automation", "Library"]
-  category: "AI"
-  featured: true
-  size: "large"
-  open_source: true
-
-- name: "Cricket Brain"
-  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.svg"
-  url: "https://github.com/BEKO2210/cricket-brain"
-  tags: ["AI", "Neuromorphic", "Research", "Python"]
-  category: "AI"
-  featured: true
-  size: "large"
-  open_source: true
-
 - name: "ChartWave"
   description: "Global Music Charts PWA mit 30s Previews – Länder & Genres, täglich aktualisiert via GitHub Actions"
   type: "project"
@@ -117,50 +211,6 @@
   tags: ["PWA", "Music", "Astro", "TypeScript"]
   category: "Music"
   featured: false
-  size: "medium"
-  open_source: true
-
-- name: "World One 2.0"
-  description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.png"
-  url: "https://github.com/BEKO2210/World.One_v2.0"
-  tags: ["Dashboard", "Open Data", "JavaScript", "GitHub Actions"]
-  category: "Data"
-  featured: true
-  size: "large"
-  open_source: true
-
-- name: "KI-Entdecker"
-  description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.png"
-  url: "https://github.com/BEKO2210/KI-Entdecker"
-  tags: ["AI", "Education", "Kids", "TypeScript"]
-  category: "Education"
-  featured: true
-  size: "large"
-  open_source: true
-
-- name: "PrepTrack"
-  description: "Offline-first PWA für Notfallvorsorge – Barcodes scannen, Haltbarkeit tracken, alles lokal, kein Tracking"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/preptrack-desktop.png"
-  url: "https://github.com/BEKO2210/Prepper_Log"
-  tags: ["PWA", "Offline", "Prepping", "Inventory"]
-  category: "Tools"
-  featured: true
-  size: "medium"
-  open_source: true
-
-- name: "Survival Kit"
-  description: "Notfall- & Krisenvorsorge PWA – komplett offline, digitaler Guide für den Ernstfall"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/survivalkit-desktop.png"
-  url: "https://github.com/BEKO2210/Survival_kit"
-  tags: ["PWA", "Offline", "Prepping"]
-  category: "Tools"
-  featured: true
   size: "medium"
   open_source: true
 
@@ -173,28 +223,6 @@
   category: "Education"
   featured: false
   size: "medium"
-  open_source: true
-
-- name: "Firstbrain"
-  description: "Second Brain Obsidian Edition – persönliches Knowledge-Management-System"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/firstbrain-desktop.svg"
-  url: "https://github.com/BEKO2210/Firstbrain"
-  tags: ["Obsidian", "PKM", "Productivity"]
-  category: "Tools"
-  featured: true
-  size: "medium"
-  open_source: true
-
-- name: "European Alternatives"
-  description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.png"
-  url: "https://github.com/BEKO2210/european-alternatives.eu-free-open-source"
-  tags: ["FOSS", "Directory", "GDPR", "Astro"]
-  category: "Tools"
-  featured: true
-  size: "large"
   open_source: true
 
 - name: "FuelFinder Pro"
@@ -239,4 +267,955 @@
   category: "AI"
   featured: false
   size: "medium"
+  open_source: true
+
+# ============================================================
+# NON-FEATURED – alle weiteren Repos (86) automatisch aus GitHub uebernommen
+# Bildquelle: GitHub OpenGraph (extern gerendert)
+# ============================================================
+
+- name: "World report"
+  description: "A self-updating global dashboard that aggregates 40+ open data sources (NASA, World Bank, WHO, etc.) to compute a transparent World Index every 6 hours."
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/World_report"
+  url: "https://github.com/BEKO2210/World_report"
+  tags: ["JavaScript", "dashboard", "open-data"]
+  category: "Data"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Ibo Player Pro"
+  description: "Ibo Player Pro – Repo auf GitHub (Kotlin)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Ibo_Player_Pro"
+  url: "https://github.com/BEKO2210/Ibo_Player_Pro"
+  tags: ["Kotlin"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Abschlusszeitung"
+  description: "Abschlusszeitung – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Abschlusszeitung"
+  url: "https://github.com/BEKO2210/Abschlusszeitung"
+  tags: ["JavaScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "make your own yxz"
+  description: "make your own yxz – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/make_your_own_yxz-"
+  url: "https://github.com/BEKO2210/make_your_own_yxz-"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Iliria IPTV"
+  description: "Iliria IPTV – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Iliria_IPTV"
+  url: "https://github.com/BEKO2210/Iliria_IPTV"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Astral whatch"
+  description: "Astral whatch – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Astral_whatch"
+  url: "https://github.com/BEKO2210/Astral_whatch"
+  tags: ["JavaScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "SpotPilot"
+  description: "Ein automatisches Buchungssystem"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/SpotPilot"
+  url: "https://github.com/BEKO2210/SpotPilot"
+  tags: ["TypeScript"]
+  category: "Education"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "My Vault"
+  description: "My Vault – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/My_Vault"
+  url: "https://github.com/BEKO2210/My_Vault"
+  tags: ["JavaScript"]
+  category: "Tools"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Mnemosyne"
+  description: "Mnemosyne – Repo auf GitHub (Python)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Mnemosyne"
+  url: "https://github.com/BEKO2210/Mnemosyne"
+  tags: ["Python"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Android Engineer"
+  description: "Android Engineer – Repo auf GitHub (Kotlin)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Android_Engineer"
+  url: "https://github.com/BEKO2210/Android_Engineer"
+  tags: ["Kotlin"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Universal AI Clothing Kit"
+  description: "Universal AI Clothing Kit – Repo auf GitHub (Rust)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Universal-AI-Clothing-Kit"
+  url: "https://github.com/BEKO2210/Universal-AI-Clothing-Kit"
+  tags: ["Rust"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "my interactive books"
+  description: "my interactive books – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/my_interactive_books"
+  url: "https://github.com/BEKO2210/my_interactive_books"
+  tags: ["JavaScript"]
+  category: "Education"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "AI Architect"
+  description: "AI Architect – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/AI_Architect"
+  url: "https://github.com/BEKO2210/AI_Architect"
+  tags: ["HTML"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "kids"
+  description: "kids – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/kids"
+  url: "https://github.com/BEKO2210/kids"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Prompt Copyrighting"
+  description: "Prompt Copyrighting – Repo auf GitHub (Astro)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Prompt_Copyrighting"
+  url: "https://github.com/BEKO2210/Prompt_Copyrighting"
+  tags: ["Astro"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "offline ark"
+  description: "The Ultimate Offline Survival Handbook — Make AI, knowledge, tools & entire workflows work without internet."
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/offline-ark"
+  url: "https://github.com/BEKO2210/offline-ark"
+  tags: ["Repo"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "breitenbuechers website"
+  description: "demo-webseite"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/breitenbuechers-website"
+  url: "https://github.com/BEKO2210/breitenbuechers-website"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Handmade Hero german"
+  description: "Handmade Hero german – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Handmade_Hero_german"
+  url: "https://github.com/BEKO2210/Handmade_Hero_german"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Build Your Own XYZ"
+  description: "Build Your Own XYZ – Repo auf GitHub (Astro)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Build_Your_Own_XYZ"
+  url: "https://github.com/BEKO2210/Build_Your_Own_XYZ"
+  tags: ["Astro"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "GEO spy"
+  description: "GEO spy – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/GEO_spy"
+  url: "https://github.com/BEKO2210/GEO_spy"
+  tags: ["JavaScript"]
+  category: "Tools"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Code Universum"
+  description: "Code Universum – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Code-Universum"
+  url: "https://github.com/BEKO2210/Code-Universum"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Safety Bug Bounty"
+  description: "Safety Bug Bounty – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Safety_Bug_Bounty-"
+  url: "https://github.com/BEKO2210/Safety_Bug_Bounty-"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "repovera kickstarter"
+  description: "repovera kickstarter – Repo auf GitHub (Astro)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/repovera-kickstarter"
+  url: "https://github.com/BEKO2210/repovera-kickstarter"
+  tags: ["Astro"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "cipherlink"
+  description: "cipherlink – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/cipherlink"
+  url: "https://github.com/BEKO2210/cipherlink"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "PROMPT writing books"
+  description: "PROMPT writing books – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/PROMPT_writing_books"
+  url: "https://github.com/BEKO2210/PROMPT_writing_books"
+  tags: ["HTML"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Vokabel"
+  description: "Vokabeltrainer"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Vokabel-"
+  url: "https://github.com/BEKO2210/Vokabel-"
+  tags: ["CSS"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "OBD Dash"
+  description: "OBD Dash – Repo auf GitHub (Python)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/OBD-Dash"
+  url: "https://github.com/BEKO2210/OBD-Dash"
+  tags: ["Python"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "BEKO2210"
+  description: "BEKO2210 – Repo auf GitHub (Repo)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/BEKO2210"
+  url: "https://github.com/BEKO2210/BEKO2210"
+  tags: ["Repo"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Kochen"
+  description: "Kochen – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Kochen"
+  url: "https://github.com/BEKO2210/Kochen"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "KI CMR"
+  description: "Sale Pipeline"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/KI-CMR"
+  url: "https://github.com/BEKO2210/KI-CMR"
+  tags: ["TypeScript"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "BookKing"
+  description: "BookKing – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/BookKing"
+  url: "https://github.com/BEKO2210/BookKing"
+  tags: ["TypeScript"]
+  category: "Education"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Automotive Production Arrival Time PWA"
+  description: "Automotive Production Arrival Time PWA – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Automotive-Production-Arrival-Time-PWA"
+  url: "https://github.com/BEKO2210/Automotive-Production-Arrival-Time-PWA"
+  tags: ["TypeScript"]
+  category: "Tools"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Restaurant Gastro Website Demo"
+  description: "Restaurant Gastro Website Demo – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Restaurant-Gastro-Website-Demo"
+  url: "https://github.com/BEKO2210/Restaurant-Gastro-Website-Demo"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "MHD INVENTOY"
+  description: "MHD INVENTOY – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/MHD_INVENTOY"
+  url: "https://github.com/BEKO2210/MHD_INVENTOY"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Free APIs Director"
+  description: "Free APIs Director – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Free-APIs-Director"
+  url: "https://github.com/BEKO2210/Free-APIs-Director"
+  tags: ["JavaScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Pok Vault"
+  description: "Pok Vault – Repo auf GitHub (Repo)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Pok-Vault"
+  url: "https://github.com/BEKO2210/Pok-Vault"
+  tags: ["Repo"]
+  category: "Art"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "KIMI Skills"
+  description: "Skills_Kimi"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/KIMI_Skills"
+  url: "https://github.com/BEKO2210/KIMI_Skills"
+  tags: ["Repo"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "DigitalQuran"
+  description: "A digital version of the Quran"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/DigitalQuran"
+  url: "https://github.com/BEKO2210/DigitalQuran"
+  tags: ["HTML"]
+  category: "Education"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "HyperPress"
+  description: "HyperPress – Repo auf GitHub (Python)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/HyperPress"
+  url: "https://github.com/BEKO2210/HyperPress"
+  tags: ["Python"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "pokedex complete"
+  description: "pokedex complete – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/pokedex-complete"
+  url: "https://github.com/BEKO2210/pokedex-complete"
+  tags: ["HTML"]
+  category: "Art"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "One"
+  description: "NeuralForge AI - Complete AI SaaS Platform with 6 Tools"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/One"
+  url: "https://github.com/BEKO2210/One"
+  tags: ["TypeScript"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "dragonball showcase"
+  description: "Dragon Ball 3D Carousel Character Showcase"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/dragonball-showcase"
+  url: "https://github.com/BEKO2210/dragonball-showcase"
+  tags: ["HTML"]
+  category: "Art"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "pokedex pro"
+  description: "PokéDex Pro - Premium Pokémon Landing Page mit API-Integration"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/pokedex-pro"
+  url: "https://github.com/BEKO2210/pokedex-pro"
+  tags: ["HTML"]
+  category: "Art"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "budget planner 2026"
+  description: "Annual Budget Planner 2026 - Landing Page"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/budget-planner-2026"
+  url: "https://github.com/BEKO2210/budget-planner-2026"
+  tags: ["HTML"]
+  category: "Business"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "nexus demo"
+  description: "NEXUS AI Automation Landing Page"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/nexus-demo"
+  url: "https://github.com/BEKO2210/nexus-demo"
+  tags: ["HTML"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "prompt engineering buch"
+  description: "prompt engineering buch – Repo auf GitHub (Repo)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/prompt-engineering-buch"
+  url: "https://github.com/BEKO2210/prompt-engineering-buch"
+  tags: ["Repo"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "rawmat early warning"
+  description: "Kostenloses Rohstoff-Frühwarnsystem Dashboard"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/rawmat-early-warning"
+  url: "https://github.com/BEKO2210/rawmat-early-warning"
+  tags: ["TypeScript"]
+  category: "Data"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "homeofficedeutschland"
+  description: "Remote Jobs in Deutschland - Jobboard"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/homeofficedeutschland"
+  url: "https://github.com/BEKO2210/homeofficedeutschland"
+  tags: ["TypeScript"]
+  category: "Business"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "iftar"
+  description: "iftar – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/iftar"
+  url: "https://github.com/BEKO2210/iftar"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Blackmail"
+  description: "Blackmail – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Blackmail"
+  url: "https://github.com/BEKO2210/Blackmail"
+  tags: ["HTML"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Nebenkostenpr fer Kit"
+  description: "Nebenkostenpr fer Kit – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Nebenkostenpr-fer-Kit"
+  url: "https://github.com/BEKO2210/Nebenkostenpr-fer-Kit"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "IdeaForge"
+  description: "IdeaForge – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/IdeaForge"
+  url: "https://github.com/BEKO2210/IdeaForge"
+  tags: ["JavaScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "TheEagle"
+  description: "GOAT"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/TheEagle"
+  url: "https://github.com/BEKO2210/TheEagle"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Self test"
+  description: "Self test – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Self-test"
+  url: "https://github.com/BEKO2210/Self-test"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Solar"
+  description: "Solar – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Solar"
+  url: "https://github.com/BEKO2210/Solar"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "MinimalisticTimer"
+  description: "MinimalisticTimer – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/MinimalisticTimer"
+  url: "https://github.com/BEKO2210/MinimalisticTimer"
+  tags: ["JavaScript"]
+  category: "Tools"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Context Engineering"
+  description: "Context Engineering – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Context-Engineering"
+  url: "https://github.com/BEKO2210/Context-Engineering"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "CashFlow 2"
+  description: "CashFlow 2 – Repo auf GitHub (CSS)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/CashFlow_2"
+  url: "https://github.com/BEKO2210/CashFlow_2"
+  tags: ["CSS"]
+  category: "Business"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "CashFlow"
+  description: "CashFlow – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/CashFlow"
+  url: "https://github.com/BEKO2210/CashFlow"
+  tags: ["JavaScript"]
+  category: "Business"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Survival"
+  description: "Survival – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Survival"
+  url: "https://github.com/BEKO2210/Survival"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Vokabel go"
+  description: "Vokabel"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Vokabel-go"
+  url: "https://github.com/BEKO2210/Vokabel-go"
+  tags: ["JavaScript"]
+  category: "Education"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Vokabel Master"
+  description: "Vokabel Master – Repo auf GitHub (Repo)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Vokabel-Master"
+  url: "https://github.com/BEKO2210/Vokabel-Master"
+  tags: ["Repo"]
+  category: "Education"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Finanzierung Pro"
+  description: "Finanzierung Pro – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Finanzierung-Pro"
+  url: "https://github.com/BEKO2210/Finanzierung-Pro"
+  tags: ["HTML"]
+  category: "Business"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "SimpleList"
+  description: "SimpleList – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/SimpleList"
+  url: "https://github.com/BEKO2210/SimpleList"
+  tags: ["JavaScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Nils Blumhardt"
+  description: "Nils Blumhardt – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Nils-Blumhardt"
+  url: "https://github.com/BEKO2210/Nils-Blumhardt"
+  tags: ["HTML"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "get shit done qwen"
+  description: "get shit done qwen – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/get-shit-done-qwen"
+  url: "https://github.com/BEKO2210/get-shit-done-qwen"
+  tags: ["JavaScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "aura os"
+  description: "aura os – Repo auf GitHub (Repo)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/aura-os"
+  url: "https://github.com/BEKO2210/aura-os"
+  tags: ["Repo"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Convergence"
+  description: "Convergence – Repo auf GitHub (Python)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Convergence"
+  url: "https://github.com/BEKO2210/Convergence"
+  tags: ["Python"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Meet the Beat"
+  description: "Meet the Beat – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Meet-the-Beat"
+  url: "https://github.com/BEKO2210/Meet-the-Beat"
+  tags: ["TypeScript"]
+  category: "Music"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Gusto"
+  description: "Gusto – Repo auf GitHub (TypeScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Gusto"
+  url: "https://github.com/BEKO2210/Gusto"
+  tags: ["TypeScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Scientific Psychological Log Journal"
+  description: "Scientific Psychological Log Journal – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Scientific-Psychological-Log-Journal"
+  url: "https://github.com/BEKO2210/Scientific-Psychological-Log-Journal"
+  tags: ["JavaScript"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Maxim M16 Game"
+  description: "Maxim M16 Game – Repo auf GitHub (Python)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Maxim-M16-Game"
+  url: "https://github.com/BEKO2210/Maxim-M16-Game"
+  tags: ["Python"]
+  category: "Art"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Tamagotchi"
+  description: "Tamagotchi – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Tamagotchi"
+  url: "https://github.com/BEKO2210/Tamagotchi"
+  tags: ["JavaScript"]
+  category: "Art"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "OFF Line AI LLM"
+  description: "OFF Line AI LLM – Repo auf GitHub (Kotlin)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/OFF-Line-AI-LLM"
+  url: "https://github.com/BEKO2210/OFF-Line-AI-LLM"
+  tags: ["Kotlin"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Datenschutz Prompt Manager"
+  description: "Datenschutzseite"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Datenschutz-Prompt-Manager"
+  url: "https://github.com/BEKO2210/Datenschutz-Prompt-Manager"
+  tags: ["HTML"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Prompt Manager Android App"
+  description: "Professioneller Prompt-Manager für Android mit dynamischen Platzhaltern, Dropdowns und Live-Preview"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Prompt-Manager_Android-App"
+  url: "https://github.com/BEKO2210/Prompt-Manager_Android-App"
+  tags: ["Kotlin"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Lyra Prompt Optimizer"
+  description: "Bring your Prompts to the next LvL"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Lyra-Prompt-Optimizer"
+  url: "https://github.com/BEKO2210/Lyra-Prompt-Optimizer"
+  tags: ["TypeScript"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "belkis llm finetunes"
+  description: "Meine eigenen Finetuning-Experimente mit Unsloth und LLaMA"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/belkis-llm-finetunes"
+  url: "https://github.com/BEKO2210/belkis-llm-finetunes"
+  tags: ["Python"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "NeuroShard Architecture"
+  description: "Experimental Mixture-of-Experts Architecture (NeuroShard) mit trainierbarem Router und low-rank Shards"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/NeuroShard-Architecture"
+  url: "https://github.com/BEKO2210/NeuroShard-Architecture"
+  tags: ["Python"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Training Data Generator"
+  description: "Training Data Generator – Repo auf GitHub (HTML)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Training-Data-Generator"
+  url: "https://github.com/BEKO2210/Training-Data-Generator"
+  tags: ["HTML"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "LoRA Forge"
+  description: "Streamlined Tool zum Konfigurieren und Ausführen von LoRA Fine-Tuning auf LLMs"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/LoRA-Forge"
+  url: "https://github.com/BEKO2210/LoRA-Forge"
+  tags: ["TypeScript"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Prompt Manager Pro"
+  description: "Prompt Manager Pro – Repo auf GitHub (JavaScript)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Prompt-Manager-Pro"
+  url: "https://github.com/BEKO2210/Prompt-Manager-Pro"
+  tags: ["JavaScript"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Claude.ai experiments"
+  description: "Claude.ai experiments – Repo auf GitHub (Python)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Claude.ai-experiments"
+  url: "https://github.com/BEKO2210/Claude.ai-experiments"
+  tags: ["Python"]
+  category: "AI"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "life organizer"
+  description: "Lebenslanges Organisations-System – Bringt Struktur in digitales & analoges Chaos"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/life-organizer"
+  url: "https://github.com/BEKO2210/life-organizer"
+  tags: ["Python"]
+  category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Beat to the kiss"
+  description: "my Musik website"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Beat_to_the_kiss"
+  url: "https://github.com/BEKO2210/Beat_to_the_kiss"
+  tags: ["HTML"]
+  category: "Music"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Kebab"
+  description: "Kebab – Repo auf GitHub (SCSS)"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Kebab"
+  url: "https://github.com/BEKO2210/Kebab"
+  tags: ["SCSS"]
+  category: "Code"
+  featured: false
+  size: "small"
   open_source: true
