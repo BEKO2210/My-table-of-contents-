@@ -127,7 +127,7 @@
 - name: "World One 2.0"
   description: "Der Zustand der Welt in einem Scroll-Erlebnis – 65+ Live-Datenquellen, automatisch via GitHub Actions aktualisiert"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.jpg"
+  image: "/My-table-of-contents-/assets/images/projects/worldone-desktop.png"
   url: "https://github.com/BEKO2210/World.One_v2.0"
   tags: ["Dashboard", "Open Data", "JavaScript", "GitHub Actions"]
   category: "Data"
