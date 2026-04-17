@@ -444,7 +444,7 @@ Weitere Checks:
 - Prüfe ob GitHub Pages in den Settings aktiviert ist
 - Warte 1-2 Minuten nach dem Push (Build-Zeit)
 - Prüfe die Actions-Tab für Build-Errors
-- Branch muss korrekt sein (claude/jekyll-portfolio-setup-Pid7B)
+- Branch muss korrekt sein (`main`)
 
 ## 📄 Lizenz
 

@@ -111,47 +111,20 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>{{ site.author }}</h3>
-                    <p>Developer, Innovator & Creator</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Social</h4>
-                    <a href="https://github.com/BEKO2210" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://x.com/XxBeko88xX" target="_blank">
-                        <i class="fab fa-x-twitter"></i> X (Twitter)
-                    </a>
-                    <a href="https://huggingface.co/Beko2210" target="_blank">
-                        <i class="fas fa-face-smile"></i> HuggingFace
-                    </a>
-                    <a href="https://www.instagram.com/_b_to_the_kiss_" target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://www.facebook.com/share/1DGo4F1oaF/" target="_blank">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                </div>
-                <div class="footer-section">
-                    <h4>Built with</h4>
-                    <p>Jekyll · GitHub Pages · Love ❤️</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <a href="{{ '/impressum.html' | relative_url }}">
-                        <i class="fas fa-info-circle"></i> Impressum
-                    </a>
-                    <a href="{{ '/datenschutz.html' | relative_url }}">
-                        <i class="fas fa-shield-alt"></i> Datenschutz
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
-            </div>
+        <div class="container footer-inner">
+            <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} {{ site.author }}</p>
+            <nav class="footer-social" aria-label="Social">
+                <a href="https://github.com/BEKO2210" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/XxBeko88xX" target="_blank" rel="noopener" aria-label="X" title="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://huggingface.co/Beko2210" target="_blank" rel="noopener" aria-label="HuggingFace" title="HuggingFace"><i class="fas fa-face-smile"></i></a>
+                <a href="https://www.instagram.com/_b_to_the_kiss_" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1DGo4F1oaF/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook"></i></a>
+            </nav>
+            <nav class="footer-legal" aria-label="Rechtliches">
+                <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
+                <span class="footer-dot" aria-hidden="true">·</span>
+                <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
+            </nav>
         </div>
     </footer>
 

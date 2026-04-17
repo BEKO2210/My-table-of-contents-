@@ -6,7 +6,7 @@
 2. **Klicke:** Settings (oben rechts)
 3. **Klicke:** Pages (links in der Sidebar)
 4. **Wähle aus:**
-   - Branch: `claude/jekyll-portfolio-setup-Pid7B`
+   - Branch: `main`
    - Folder: `/ (root)`
 5. **Klicke:** Save
 6. **Warte:** 2-3 Minuten
@@ -22,7 +22,7 @@ https://BEKO2210.github.io/My-table-of-contents-/
 
 ## 🚀 SCHRITT 2: Dein erstes Projekt hinzufügen
 
-1. **Öffne:** https://github.com/BEKO2210/My-table-of-contents-/blob/claude/jekyll-portfolio-setup-Pid7B/_data/projects.yml
+1. **Öffne:** https://github.com/BEKO2210/My-table-of-contents-/blob/main/_data/projects.yml
 2. **Klicke:** Stift-Symbol (Edit)
 3. **Füge hinzu** (am Ende der Datei):
 
@@ -99,7 +99,7 @@ Andere Farben ausprobieren:
 → Warte 3 Minuten und aktualisiere
 
 **Branch nicht gefunden?**
-→ Nutze genau: `claude/jekyll-portfolio-setup-Pid7B`
+→ Nutze genau: `main`
 
 **Änderungen nicht sichtbar?**
 → Warte 1-2 Minuten nach dem Commit
