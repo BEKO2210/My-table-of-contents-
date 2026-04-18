@@ -1,0 +1,40 @@
+---
+---
+{
+  "name": "B.A Portfolio",
+  "short_name": "B.A Portfolio",
+  "description": "{{ site.description }}",
+  "start_url": "{{ site.baseurl }}/",
+  "scope": "{{ site.baseurl }}/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "lang": "de",
+  "icons": [
+    {
+      "src": "{{ site.baseurl }}/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ site.baseurl }}/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ site.baseurl }}/assets/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "{{ site.baseurl }}/assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

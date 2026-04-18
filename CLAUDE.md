@@ -67,6 +67,7 @@ Niemals direkt auf `main`. Immer auf dem von der Session vorgegebenen `claude/<t
 - **20 Projekte** in `projects.yml`, davon **9 featured**.
 - **Featured (Reihenfolge im File):** QuickBrief, Lyra Prompts, Cricket Brain, World One 2.0, KI-Entdecker, PrepTrack, Survival Kit, Firstbrain, European Alternatives.
 - **Removed (nicht wieder aufnehmen ohne Nachfrage):** Life Organizer, Context Engineering, IdeaForge, Vokabel-go, HomeOfficeDeutschland, Belkis LLM Finetunes, Code-Universum.
+- **PWA aktiv:** installierbar als „B.A Portfolio", schwarzer BG, Icon aus `assets/media/PWA_Icon.png`. Icon-Set in `assets/icons/`. Manifest: `manifest.webmanifest`. Service Worker: `sw.js` mit Auto-Versionierung über `site.time` (neuer Cache pro Jekyll-Build, alte Caches werden aufgeräumt). Registrierung im `_layouts/default.html`-Footer.
 
 > Diesen Abschnitt nach jedem strukturellen Change (Projekt hinzu/raus, Featured-Wechsel) aktualisieren.
 
