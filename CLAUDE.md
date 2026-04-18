@@ -64,10 +64,10 @@ Niemals direkt auf `main`. Immer auf dem von der Session vorgegebenen `claude/<t
 `git push -u origin <branch>`. Kein Force-Push. Keine PR ohne explizite Aufforderung.
 
 ## 5. Aktueller Zustand (Cache)
-- **109 Projekte** in `projects.yml`, davon **12 featured**.
-- **Featured (Reihenfolge im File):** KI-Entdecker, World One 2.0, European Alternatives, GitHub App Store, API Directory, Firstbrain, PrepTrack, Survival Kit, Cricket Brain, Lyra Prompts, QuickBrief, MiroFish DE.
-- **Non-Featured** umfasst den vollständigen Bestand aller öffentlichen BEKO2210-Repos (ohne private/archivierte). Bildquelle für massenhaft angelegte Repos: GitHub OpenGraph (`https://opengraph.githubassets.com/1/BEKO2210/<repo>`), extern geladen – nicht lokal abgelegt.
-- **Hinweis:** Die frühere „genau 9 featured" Regel wurde auf Wunsch auf **12** angehoben. Konsistenz-Check in §7 entsprechend angepasst.
+- **20 Projekte** in `projects.yml`, davon **9 featured**.
+- **Featured (Reihenfolge im File):** QuickBrief, Lyra Prompts, Cricket Brain, World One 2.0, KI-Entdecker, PrepTrack, Survival Kit, Firstbrain, European Alternatives.
+- **Removed (nicht wieder aufnehmen ohne Nachfrage):** Life Organizer, Context Engineering, IdeaForge, Vokabel-go, HomeOfficeDeutschland, Belkis LLM Finetunes, Code-Universum.
+- **PWA aktiv:** installierbar als „B.A Portfolio", schwarzer BG, Icon aus `assets/media/PWA_Icon.png`. Icon-Set in `assets/icons/`. Manifest: `manifest.webmanifest`. Service Worker: `sw.js` mit Auto-Versionierung über `site.time` (neuer Cache pro Jekyll-Build, alte Caches werden aufgeräumt). Registrierung im `_layouts/default.html`-Footer.
 
 > Diesen Abschnitt nach jedem strukturellen Change (Projekt hinzu/raus, Featured-Wechsel) aktualisieren.
 
