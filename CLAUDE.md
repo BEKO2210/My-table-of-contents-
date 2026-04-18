@@ -97,9 +97,9 @@ Kategorien: `bug` · `feature` · `maintenance` · `consistency` · `perf` · `d
 
 ## 7. Konsistenz-Checkliste (vor jedem Commit/Push)
 - [ ] YAML valide (keine Tab-Einrückung, Quotes konsistent)
-- [ ] Jeder `image:`-Pfad in `projects.yml` existiert auf Platte
+- [ ] Jeder **lokale** `image:`-Pfad in `projects.yml` existiert auf Platte (externe `https://`-URLs sind erlaubt und werden nicht geprüft)
 - [ ] Keine Waisen-Bilder in `assets/images/projects/` (ohne YAML-Referenz)
-- [ ] Genau **9** Einträge mit `featured: true`
+- [ ] Genau **12** Einträge mit `featured: true`
 - [ ] README/ANLEITUNG/SCHNELLSTART noch stimmig
 - [ ] Commit auf richtigem Branch, Message deutsch + aussagekräftig
 
@@ -108,7 +108,7 @@ Quick-Check aus dem Repo-Root:
 # orphan-check
 comm -23 <(ls assets/images/projects | sort) <(grep -oE '[a-z0-9.-]+\.(jpg|png|svg|gif|webp)' _data/projects.yml | sort -u)
 # featured count (nur echte YAML-Einträge, nicht Schema-Kommentar)
-grep -c '^  featured: true' _data/projects.yml   # Erwartung: 9
+grep -c '^  featured: true' _data/projects.yml   # Erwartung: 12
 ```
 
 ## 8. Commits & Historie
