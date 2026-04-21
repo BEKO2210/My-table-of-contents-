@@ -88,6 +88,9 @@ Kategorien: `bug` · `feature` · `maintenance` · `consistency` · `perf` · `d
 
 ### Offen
 <!-- Neueste oben. -->
+- [ ] 2026-04-21 · perf · World.One.gif (10 MB) komprimieren/verkleinern
+      Detail: überschreitet das 500 KB Hard-Limit deutlich; ggf. als WebP/MP4 oder kleinere GIF-Version ersetzen
+      Betrifft: assets/images/projects/World.One.gif, _data/projects.yml
 
 ### Erledigt
 <!-- Format: - [x] Datum · Kat · Zeile (<commit-hash>) -->
