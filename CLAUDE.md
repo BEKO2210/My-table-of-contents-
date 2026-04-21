@@ -88,12 +88,10 @@ Kategorien: `bug` · `feature` · `maintenance` · `consistency` · `perf` · `d
 
 ### Offen
 <!-- Neueste oben. -->
-- [ ] 2026-04-21 · perf · World.One.gif (10 MB) komprimieren/verkleinern
-      Detail: überschreitet das 500 KB Hard-Limit deutlich; ggf. als WebP/MP4 oder kleinere GIF-Version ersetzen
-      Betrifft: assets/images/projects/World.One.gif, _data/projects.yml
 
 ### Erledigt
 <!-- Format: - [x] Datum · Kat · Zeile (<commit-hash>) -->
+- [x] 2026-04-21 · perf · World.One als animiertes WebP (256×256, 10fps, q70) → 10 MB → 916 KB (-91%)
 - [x] 2026-04-17 · docs · README/ANLEITUNG/SCHNELLSTART auf Aktualität gebracht nach Projekt-Cleanup (`7bf20d4`)
 - [x] 2026-04-17 · consistency · Stale Kommentare in `projects.yml` entfernt (`7bf20d4`)
 - [x] 2026-04-17 · perf · KI-Entdecker-Bild von 1,6 MB auf 100 KB komprimiert (`7bf20d4`)
