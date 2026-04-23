@@ -2,13 +2,57 @@
 # Schema siehe CLAUDE.md §3
 
 # ============================================================
-# FEATURED (12) – Reihenfolge wie auf der Startseite
+# FEATURED (16) – Reihenfolge wie auf der Startseite
 # ============================================================
+
+- name: "Samsung S Ultra Live Wallpaper"
+  description: "Interaktives Live-Wallpaper für Samsung Galaxy S Ultra – browserbasiert, reine Web-Technologien"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Samsung-S-Ultra-Live-Wallpaper"
+  url: "https://github.com/BEKO2210/Samsung-S-Ultra-Live-Wallpaper"
+  tags: ["HTML", "JavaScript", "Wallpaper"]
+  category: "Art"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "Prompt-Versionierung"
+  description: "Branch. Prove. Ship. – Offline-first Git-Style Prompt-Management mit Versionskontrolle, Evals und Peer-Review im Browser"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Prompt-Versionierung"
+  url: "https://beko2210.github.io/Prompt-Versionierung/"
+  tags: ["AI", "Prompts", "Versioning", "TypeScript"]
+  category: "AI"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "IQ-TEST"
+  description: "Freier, wissenschaftlich fundierter Selbsteinschätzungs-IQ-Test nach Cattell-Horn-Carroll – statische Web-App, keine Diagnose"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/IQ-TEST"
+  url: "https://beko2210.github.io/IQ-TEST/"
+  tags: ["Education", "Assessment", "HTML"]
+  category: "Education"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "World report"
+  description: "Selbst-aktualisierendes globales Dashboard – aggregiert 40+ offene Datenquellen (NASA, WHO, World Bank) alle 6 Stunden zum transparenten World Index"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/World_report"
+  url: "https://github.com/BEKO2210/World_report"
+  tags: ["Dashboard", "Open Data", "JavaScript"]
+  category: "Data"
+  featured: true
+  size: "medium"
+  open_source: true
 
 - name: "KI-Entdecker"
   description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
   type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker-desktop.png"
+  image: "/My-table-of-contents-/assets/images/projects/ki-entdecker.webp"
   url: "https://beko2210.github.io/KI-Entdecker/"
   tags: ["AI", "Education", "Kids", "TypeScript"]
   category: "Education"
@@ -273,17 +317,6 @@
 # NON-FEATURED – alle weiteren Repos (86) automatisch aus GitHub uebernommen
 # Bildquelle: GitHub OpenGraph (extern gerendert)
 # ============================================================
-
-- name: "World report"
-  description: "A self-updating global dashboard that aggregates 40+ open data sources (NASA, World Bank, WHO, etc.) to compute a transparent World Index every 6 hours."
-  type: "project"
-  image: "https://opengraph.githubassets.com/1/BEKO2210/World_report"
-  url: "https://github.com/BEKO2210/World_report"
-  tags: ["JavaScript", "dashboard", "open-data"]
-  category: "Data"
-  featured: false
-  size: "small"
-  open_source: true
 
 - name: "Ibo Player Pro"
   description: "Ibo Player Pro – Repo auf GitHub (Kotlin)"
