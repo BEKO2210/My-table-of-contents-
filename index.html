@@ -22,19 +22,19 @@ title: Portfolio - Belkis Aslani
         <!-- Left Side: Content -->
         <div class="hero-left">
             <!-- Availability Badge -->
-            <div class="hero-badge">
+            <div class="hero-badge" data-hero-step="1">
                 <span class="badge-dot"></span>
                 <span>Verfügbar für Projekte</span>
             </div>
 
             <!-- Main Title -->
             <h1 class="hero-title">
-                <span class="hero-greeting">Hi, ich bin</span>
-                <span class="hero-name gradient-text">Belkis Aslani</span>
+                <span class="hero-greeting split-line" data-splitting="chars" data-hero-step="2">Hi, ich bin</span>
+                <span class="hero-name gradient-text" data-hero-step="3">Belkis Aslani</span>
             </h1>
 
             <!-- Animated Role Subtitle -->
-            <div class="hero-roles">
+            <div class="hero-roles" data-hero-step="4">
                 <span class="role-prefix">Ich bin</span>
                 <div class="role-carousel">
                     <span class="role-item active">Developer</span>
@@ -45,38 +45,38 @@ title: Portfolio - Belkis Aslani
             </div>
 
             <!-- Description -->
-            <p class="hero-description">
+            <p class="hero-description split-words" data-splitting="words" data-hero-step="5">
                 Von KI-Anwendungen bis zu innovativen Web-Lösungen.
                 Entdecke meine Projekte und kreative Arbeit.
             </p>
 
             <!-- CTA Buttons -->
-            <div class="hero-cta">
-                <a href="#projekte" class="btn btn-primary">
+            <div class="hero-cta" data-hero-step="6">
+                <a href="#projekte" class="btn btn-primary magnetic" data-magnetic="0.3" data-magnetic-max="14">
                     <i class="fas fa-rocket"></i>
                     <span>Projekte ansehen</span>
                 </a>
-                <a href="https://github.com/BEKO2210" target="_blank" class="btn btn-secondary">
+                <a href="https://github.com/BEKO2210" target="_blank" class="btn btn-secondary magnetic" data-magnetic="0.3" data-magnetic-max="14">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
             </div>
 
             <!-- Social Links -->
-            <div class="hero-social">
-                <a href="https://github.com/BEKO2210" target="_blank" class="social-link" aria-label="GitHub">
+            <div class="hero-social" data-hero-step="7">
+                <a href="https://github.com/BEKO2210" target="_blank" class="social-link magnetic" aria-label="GitHub" data-magnetic="0.45" data-magnetic-max="8">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://x.com/XxBeko88xX" target="_blank" class="social-link" aria-label="X (Twitter)">
+                <a href="https://x.com/XxBeko88xX" target="_blank" class="social-link magnetic" aria-label="X (Twitter)" data-magnetic="0.45" data-magnetic-max="8">
                     <i class="fab fa-x-twitter"></i>
                 </a>
-                <a href="https://huggingface.co/Beko2210" target="_blank" class="social-link" aria-label="HuggingFace">
+                <a href="https://huggingface.co/Beko2210" target="_blank" class="social-link magnetic" aria-label="HuggingFace" data-magnetic="0.45" data-magnetic-max="8">
                     <i class="fas fa-face-smile"></i>
                 </a>
-                <a href="https://www.instagram.com/_b_to_the_kiss_" target="_blank" class="social-link" aria-label="Instagram">
+                <a href="https://www.instagram.com/_b_to_the_kiss_" target="_blank" class="social-link magnetic" aria-label="Instagram" data-magnetic="0.45" data-magnetic-max="8">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://www.facebook.com/share/1DGo4F1oaF/" target="_blank" class="social-link" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1DGo4F1oaF/" target="_blank" class="social-link magnetic" aria-label="Facebook" data-magnetic="0.45" data-magnetic-max="8">
                     <i class="fab fa-facebook"></i>
                 </a>
             </div>
@@ -163,7 +163,7 @@ title: Portfolio - Belkis Aslani
                         <p class="project-description">{{ project.description }}</p>
                         {% if project.audio %}
                         <div class="project-audio">
-                            <audio controls style="width: 100%; margin: 1rem 0;">
+                            <audio controls class="project-audio-player">
                                 <source src="{{ project.audio }}" type="audio/mpeg">
                                 Dein Browser unterstützt kein Audio.
                             </audio>
@@ -187,13 +187,12 @@ title: Portfolio - Belkis Aslani
         {% endif %}
 
         <!-- All Other Projects -->
-        {% assign all_projects = site.data.projects %}
-        {% if all_projects.size > featured.size %}
+        {% assign non_featured = site.data.projects | where_exp: "p", "p.featured != true" %}
+        {% if non_featured.size > 0 %}
         <div class="all-projects-section">
             <h3 class="projects-subtitle reveal">Weitere Projekte</h3>
             <div class="projects-grid">
-                {% for project in site.data.projects %}
-                {% unless project.featured %}
+                {% for project in non_featured %}
                 <article class="project-card reveal" data-size="{{ project.size | default: 'medium' }}">
                     <div class="project-image">
                         {% if project.image_mobile %}
@@ -216,7 +215,7 @@ title: Portfolio - Belkis Aslani
                         <p class="project-description">{{ project.description }}</p>
                         {% if project.audio %}
                         <div class="project-audio">
-                            <audio controls style="width: 100%; margin: 1rem 0;">
+                            <audio controls class="project-audio-player">
                                 <source src="{{ project.audio }}" type="audio/mpeg">
                                 Dein Browser unterstützt kein Audio.
                             </audio>
@@ -234,7 +233,6 @@ title: Portfolio - Belkis Aslani
                         </a>
                     </div>
                 </article>
-                {% endunless %}
                 {% endfor %}
             </div>
         </div>
@@ -279,7 +277,7 @@ title: Portfolio - Belkis Aslani
             <p class="contact-description">
                 Hast du ein spannendes Projekt? Lass uns darüber sprechen und etwas Großartiges erschaffen.
             </p>
-            <a href="https://wa.me/4917681462526" target="_blank" class="btn btn-primary btn-large">
+            <a href="https://wa.me/4917681462526" target="_blank" class="btn btn-primary btn-large magnetic" data-magnetic="0.25" data-magnetic-max="16">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp schreiben</span>
             </a>

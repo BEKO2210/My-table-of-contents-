@@ -9,15 +9,28 @@
     <!-- Preconnect für bessere Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts (nur genutzte Weights: 400/500/600/700) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 
     <!-- Font Awesome für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- Theme-init (verhindert Flash of Wrong Theme, läuft VOR Body-Rendering) -->
+    <script>
+    (function() {
+        try {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        } catch(e) {}
+    })();
+    </script>
 
     <!-- PWA -->
     <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
@@ -37,7 +50,7 @@
     <div class="scroll-progress"></div>
 
     <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+    <button class="theme-toggle magnetic" id="theme-toggle" aria-label="Toggle Dark/Light Mode" data-magnetic="0.4" data-magnetic-max="10">
         <i class="theme-toggle-icon fas fa-moon"></i>
     </button>
 
@@ -57,7 +70,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-left">
-                <a href="{{ '/' | relative_url }}" class="home-btn" aria-label="Home">
+                <a href="{{ '/' | relative_url }}" class="home-btn magnetic" aria-label="Home" data-magnetic="0.4" data-magnetic-max="10">
                     <i class="fas fa-home"></i>
                 </a>
                 <div class="nav-brand">
@@ -65,7 +78,7 @@
                     <p class="tagline">Portfolio</p>
                 </div>
             </div>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <button class="menu-toggle magnetic" id="menu-toggle" aria-label="Toggle Menu" data-magnetic="0.35" data-magnetic-max="8">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -138,8 +151,18 @@
         </div>
     </footer>
 
-    <!-- Custom JavaScript -->
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <!-- Premium Runtime Libraries (gzip-ready CDNs) -->
+    <!-- Lenis: buttery smooth-scroll — Awwwards Standard -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+    <!-- anime.js: timeline-based micro-animations + SVG morph -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+    <!-- Splitting.js: per-character / per-word split für Text-Reveals -->
+    <script src="https://unpkg.com/splitting@1.1.0/dist/splitting.min.js" defer></script>
+
+    <!-- Custom JavaScript (nach Libs, nutzt sie wenn vorhanden) -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/premium.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/shader-bg.js' | relative_url }}" defer></script>
 
     <!-- Service Worker Registration -->
     <script>
