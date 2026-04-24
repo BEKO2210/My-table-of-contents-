@@ -49,10 +49,16 @@ Niemals direkt auf `main`. Immer auf dem von der Session vorgegebenen `claude/<t
 4. Auffälligkeiten **nicht on-the-fly fixen** → Parkplatz (Abschnitt 6).
 
 ### Bilder
-- Quelle: echtes Asset aus dem jeweiligen Projekt-Repo (`public/`, `assets/`, README) bevorzugt.
-- Fallback: `https://opengraph.githubassets.com/1/beko2210/<repo>`.
-- Format: SVG > PNG > JPG. Hard limit 500 KB – sonst komprimieren oder anderes Asset.
+- **Immer zuerst das Repo nach einem Logo/Icon absuchen** – typische Orte: `public/`, `assets/`, `assets/img/`, `webapp/assets/`, `static/`, `img/`, `branding/`, `logos/`, `gif/`, README-Header. Dateinamen-Muster: `logo`, `icon`, `mark`, `animated`, `hero`, `banner`, `favicon`. Branch-Fallbacks: `main` → `master` → Default-Branch aus `HEAD`.
+- Priorität: animiertes Asset (SMIL-SVG, WebP, GIF) > statisches Logo/Icon (SVG, PNG) > Screenshot (PNG, JPG) > OpenGraph-Fallback (`https://opengraph.githubassets.com/1/beko2210/<repo>`).
+- Format: SVG > WebP > PNG > JPG. Hard limit **500 KB** – sonst komprimieren (animierte GIFs → WebP, Rezept 256×256, 10fps, q70) oder anderes Asset.
 - Dateiname: `<slug>-desktop.<ext>`, optional `-mobile.<ext>`.
+
+### Featured-Reihenfolge
+1. Animierte Logos (SMIL-SVG, animiertes WebP/GIF) – ganz oben.
+2. Statische Logos/Icons (SVG, PNG-Icon).
+3. Screenshots (PNG, JPG).
+4. **Keine** OpenGraph-Fallback-Einträge im Featured. Kein Bild → nicht featured, gehört ans Ende des Non-featured-Blocks.
 
 ### Commits
 - Deutsch, kurz, aktiv, max ~70 Zeichen Header.
@@ -64,9 +70,12 @@ Niemals direkt auf `main`. Immer auf dem von der Session vorgegebenen `claude/<t
 `git push -u origin <branch>`. Kein Force-Push. Keine PR ohne explizite Aufforderung.
 
 ## 5. Aktueller Zustand (Cache)
-- **Projekte in `projects.yml`**, davon **16 featured**.
-- **Featured (Reihenfolge im File):** Samsung S Ultra Live Wallpaper, Prompt-Versionierung, IQ-TEST, World report, KI-Entdecker, World One 2.0, European Alternatives, GitHub App Store, API Directory, Firstbrain, PrepTrack, Survival Kit, Cricket Brain, Lyra Prompts, QuickBrief, MiroFish DE.
-- **Removed (nicht wieder aufnehmen ohne Nachfrage):** Life Organizer, Context Engineering, IdeaForge, Vokabel-go, HomeOfficeDeutschland, Belkis LLM Finetunes, Code-Universum.
+- **Projekte in `projects.yml`**, davon **14 featured**.
+- **Featured (Reihenfolge im File):**
+  - *Animierte Logos:* Prompt-Versionierung, KI-Entdecker, World One 2.0.
+  - *Statische Logos:* Cricket Brain, Firstbrain, IQ-TEST.
+  - *Screenshots:* European Alternatives, GitHub App Store, API Directory, PrepTrack, Survival Kit, Lyra Prompts, QuickBrief, MiroFish DE.
+- **Removed (nicht wieder aufnehmen ohne Nachfrage):** Life Organizer, Context Engineering, IdeaForge, Vokabel-go, HomeOfficeDeutschland, Belkis LLM Finetunes, Code-Universum, World report.
 - **PWA aktiv:** installierbar als „B.A Portfolio", schwarzer BG, Icon aus `assets/media/PWA_Icon.png`. Icon-Set in `assets/icons/`. Manifest: `manifest.webmanifest`. Service Worker: `sw.js` mit Auto-Versionierung über `site.time` (neuer Cache pro Jekyll-Build, alte Caches werden aufgeräumt). Registrierung im `_layouts/default.html`-Footer.
 
 > Diesen Abschnitt nach jedem strukturellen Change (Projekt hinzu/raus, Featured-Wechsel) aktualisieren.
@@ -100,7 +109,9 @@ Kategorien: `bug` · `feature` · `maintenance` · `consistency` · `perf` · `d
 - [ ] YAML valide (keine Tab-Einrückung, Quotes konsistent)
 - [ ] Jeder **lokale** `image:`-Pfad in `projects.yml` existiert auf Platte (externe `https://`-URLs sind erlaubt und werden nicht geprüft)
 - [ ] Keine Waisen-Bilder in `assets/images/projects/` (ohne YAML-Referenz)
-- [ ] Genau **16** Einträge mit `featured: true`
+- [ ] Genau **14** Einträge mit `featured: true`
+- [ ] Featured-Sortierung: animierte Logos oben, dann statische Logos/Icons, dann Screenshots
+- [ ] Keine OpenGraph-Fallback-Einträge (`opengraph.githubassets.com`) im Featured-Block
 - [ ] README/ANLEITUNG/SCHNELLSTART noch stimmig
 - [ ] Commit auf richtigem Branch, Message deutsch + aussagekräftig
 
@@ -109,7 +120,9 @@ Quick-Check aus dem Repo-Root:
 # orphan-check
 comm -23 <(ls assets/images/projects | sort) <(grep -oE '[a-z0-9.-]+\.(jpg|png|svg|gif|webp)' _data/projects.yml | sort -u)
 # featured count (nur echte YAML-Einträge, nicht Schema-Kommentar)
-grep -c '^  featured: true' _data/projects.yml   # Erwartung: 16
+grep -c '^  featured: true' _data/projects.yml   # Erwartung: 14
+# Opengraph-Fallbacks im Featured-Block (Erwartung: 0)
+awk '/^# FEATURED/,/^# NON-FEATURED/' _data/projects.yml | grep -c opengraph.githubassets
 ```
 
 ## 8. Commits & Historie

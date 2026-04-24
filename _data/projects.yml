@@ -2,8 +2,23 @@
 # Schema siehe CLAUDE.md §3
 
 # ============================================================
-# FEATURED (16) – Reihenfolge wie auf der Startseite
+# FEATURED (14) – Reihenfolge wie auf der Startseite
+# Sortierung: animierte Logos zuerst, dann Static-Logos/Icons,
+# dann Screenshots. Keine OpenGraph-Fallback-Einträge im Featured.
 # ============================================================
+
+# --- Animierte Logos ---
+
+- name: "Prompt-Versionierung"
+  description: "Branch. Prove. Ship. – Offline-first Git-Style Prompt-Management mit Versionskontrolle, Evals und Peer-Review im Browser"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/prompt-versionierung-desktop.svg"
+  url: "https://beko2210.github.io/Prompt-Versionierung/"
+  tags: ["AI", "Prompts", "Versioning", "TypeScript"]
+  category: "AI"
+  featured: true
+  size: "medium"
+  open_source: true
 
 - name: "KI-Entdecker"
   description: "Kostenloser 5-Tage-Kurs: KI spielerisch für Kinder ab 8 Jahren – Prompt Engineering, kreative Projekte, Grundlagen"
@@ -26,6 +41,43 @@
   featured: true
   size: "large"
   open_source: true
+
+# --- Statische Logos / Icons ---
+
+- name: "Cricket Brain"
+  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.svg"
+  url: "https://beko2210.github.io/cricket-brain/"
+  tags: ["AI", "Neuromorphic", "Research", "Rust"]
+  category: "AI"
+  featured: true
+  size: "large"
+  open_source: true
+
+- name: "Firstbrain"
+  description: "Second Brain Obsidian Edition – persönliches Knowledge-Management-System"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/firstbrain-desktop.svg"
+  url: "https://github.com/BEKO2210/Firstbrain"
+  tags: ["Obsidian", "PKM", "Productivity"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: true
+
+- name: "IQ-TEST"
+  description: "Freier, wissenschaftlich fundierter Selbsteinschätzungs-IQ-Test nach Cattell-Horn-Carroll – statische Web-App, keine Diagnose"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/iq-test-desktop.svg"
+  url: "https://beko2210.github.io/IQ-TEST/"
+  tags: ["Education", "Assessment", "HTML"]
+  category: "Education"
+  featured: true
+  size: "medium"
+  open_source: true
+
+# --- Screenshots ---
 
 - name: "European Alternatives"
   description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
@@ -60,17 +112,6 @@
   size: "medium"
   open_source: true
 
-- name: "Firstbrain"
-  description: "Second Brain Obsidian Edition – persönliches Knowledge-Management-System"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/firstbrain-desktop.svg"
-  url: "https://github.com/BEKO2210/Firstbrain"
-  tags: ["Obsidian", "PKM", "Productivity"]
-  category: "Tools"
-  featured: true
-  size: "medium"
-  open_source: true
-
 - name: "PrepTrack"
   description: "Offline-first PWA für Notfallvorsorge – Barcodes scannen, Haltbarkeit tracken, alles lokal, kein Tracking"
   type: "project"
@@ -91,17 +132,6 @@
   category: "Tools"
   featured: true
   size: "medium"
-  open_source: true
-
-- name: "Cricket Brain"
-  description: "Biomorphic neuromorphic Inference Engine – Temporale Mustererkennung ohne Matrix-Multiplikation, ~97ns pro Schritt"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/cricketbrain-desktop.svg"
-  url: "https://beko2210.github.io/cricket-brain/"
-  tags: ["AI", "Neuromorphic", "Research", "Rust"]
-  category: "AI"
-  featured: true
-  size: "large"
   open_source: true
 
 - name: "Lyra Prompts"
@@ -1205,6 +1235,17 @@
   url: "https://github.com/BEKO2210/Kebab"
   tags: ["SCSS"]
   category: "Code"
+  featured: false
+  size: "small"
+  open_source: true
+
+- name: "Samsung S Ultra Live Wallpaper"
+  description: "Interaktives Live-Wallpaper für Samsung Galaxy S Ultra – browserbasiert, reine Web-Technologien"
+  type: "project"
+  image: "https://opengraph.githubassets.com/1/BEKO2210/Samsung-S-Ultra-Live-Wallpaper"
+  url: "https://github.com/BEKO2210/Samsung-S-Ultra-Live-Wallpaper"
+  tags: ["HTML", "JavaScript", "Wallpaper"]
+  category: "Art"
   featured: false
   size: "small"
   open_source: true
