@@ -308,6 +308,126 @@
     }
 
     // =============================================================
+    // ROLE-CAROUSEL (anime.js) — smoother als CSS keyframes
+    // =============================================================
+    function initRoleCarousel() {
+        const carousel = document.querySelector('.role-carousel');
+        if (!carousel) return;
+        const items = Array.from(carousel.querySelectorAll('.role-item'));
+        if (!items.length) return;
+
+        // CSS-Animation deaktivieren (wir nutzen anime)
+        items.forEach(it => {
+            it.style.animation = 'none';
+            it.style.opacity = '0';
+            it.style.transform = 'translate(-50%, -50%) translateY(60%)';
+        });
+
+        if (reduceMotion || typeof anime === 'undefined') {
+            // Fallback: erste Role statisch anzeigen
+            items[0].style.opacity = '1';
+            items[0].style.transform = 'translate(-50%, -50%) translateY(0)';
+            return;
+        }
+
+        let current = 0;
+        function cycle() {
+            const cur = items[current];
+            const next = items[(current + 1) % items.length];
+
+            anime({
+                targets: cur,
+                opacity: [1, 0],
+                translateY: ['0%', '-60%'],
+                easing: 'easeInQuad',
+                duration: 440,
+                complete: () => {
+                    cur.style.transform = 'translate(-50%, -50%) translateY(60%)';
+                    cur.style.opacity = '0';
+                }
+            });
+            anime({
+                targets: next,
+                opacity: [0, 1],
+                translateY: ['60%', '0%'],
+                easing: 'easeOutExpo',
+                duration: 620,
+                delay: 120
+            });
+
+            current = (current + 1) % items.length;
+        }
+        // Erste Role direkt anzeigen
+        anime({
+            targets: items[0],
+            opacity: [0, 1],
+            translateY: ['60%', '0%'],
+            easing: 'easeOutExpo',
+            duration: 720,
+            delay: 1100 // passt zum Hero-Intro
+        });
+        setInterval(cycle, 2400);
+    }
+
+    // =============================================================
+    // STATS-COUNTER (anime.js) – ersetzt setInterval-Version
+    // Nur wenn anime verfügbar; sonst bleibt main.js-Counter aktiv.
+    // =============================================================
+    function initCounters() {
+        if (typeof anime === 'undefined') return;
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                io.unobserve(e.target);
+                const el = e.target.querySelector('.stat-number');
+                if (!el) return;
+                const raw = el.textContent.trim();
+                const hasPercent = raw.includes('%');
+                const target = parseInt(raw, 10);
+                if (isNaN(target)) return;
+                const obj = { v: 0 };
+                el.textContent = hasPercent ? '0%' : '0';
+                anime({
+                    targets: obj,
+                    v: target,
+                    duration: 1600,
+                    easing: 'easeOutExpo',
+                    update: () => {
+                        el.textContent = Math.round(obj.v) + (hasPercent ? '%' : '');
+                    }
+                });
+            });
+        }, { threshold: 0.45 });
+        document.querySelectorAll('.stat-card').forEach(c => io.observe(c));
+    }
+
+    // =============================================================
+    // SECTION-TITEL als split-words reveal on scroll
+    // =============================================================
+    function initSectionTitleReveal() {
+        if (reduceMotion || typeof Splitting === 'undefined') return;
+        const titles = document.querySelectorAll(
+            '.section-title, .contact-title, .featured-title, .projects-subtitle, .section-label'
+        );
+        titles.forEach(t => {
+            if (t.dataset.splitting) return; // schon erfasst
+            t.setAttribute('data-splitting', 'words');
+            t.classList.add('split-words');
+        });
+        Splitting({ target: titles, by: 'words' });
+
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('revealed');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        titles.forEach(t => io.observe(t));
+    }
+
+    // =============================================================
     // BOOT
     // =============================================================
     function boot() {
@@ -317,6 +437,9 @@
         initSplitting();
         initRevealStagger();
         initHeroTimeline();
+        initRoleCarousel();
+        initCounters();
+        initSectionTitleReveal();
         wrapThemeToggleWithViewTransition();
         window.__premium.ready = true;
     }

@@ -396,58 +396,35 @@
         });
     });
 
-    // =====================================
-    // STATS COUNTER ANIMATION
-    // =====================================
-    function animateValue(element, start, end, duration) {
-        const range = end - start;
-        const increment = range / (duration / 16);
-        let current = start;
-
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= end) {
-                element.textContent = end;
-                clearInterval(timer);
-            } else {
-                const value = Math.floor(current);
-                element.textContent = value;
-            }
-        }, 16);
+    // Stats-Counter läuft jetzt in premium.js (anime.js-basiert mit easing).
+    // Fallback: wenn premium.js/anime nicht verfügbar, bleiben die Zahlen statisch.
+    function hasAnimeCounter() {
+        return typeof window.anime !== 'undefined';
     }
-
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const statNumber = entry.target.querySelector('.stat-number');
-                if (statNumber) {
-                    const endValue = statNumber.textContent.includes('%')
-                        ? parseInt(statNumber.textContent)
-                        : parseInt(statNumber.textContent);
-
-                    if (!isNaN(endValue)) {
-                        const suffix = statNumber.textContent.includes('%') ? '%' : '';
-                        statNumber.textContent = '0' + suffix;
-
-                        const animate = () => {
-                            animateValue(statNumber, 0, endValue, 2000);
-                            if (suffix) {
-                                setTimeout(() => {
-                                    statNumber.textContent = endValue + suffix;
-                                }, 2000);
-                            }
-                        };
-                        animate();
-                    }
-                }
+    if (!hasAnimeCounter()) {
+        // Minimaler Fallback ohne easing
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
                 statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.stat-card').forEach(card => {
-        statsObserver.observe(card);
-    });
+                const el = entry.target.querySelector('.stat-number');
+                if (!el) return;
+                const raw = el.textContent.trim();
+                const hasPercent = raw.includes('%');
+                const target = parseInt(raw, 10);
+                if (isNaN(target)) return;
+                let current = 0;
+                const step = Math.max(1, Math.floor(target / 60));
+                el.textContent = hasPercent ? '0%' : '0';
+                const t = setInterval(() => {
+                    current = Math.min(target, current + step);
+                    el.textContent = current + (hasPercent ? '%' : '');
+                    if (current >= target) clearInterval(t);
+                }, 30);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.stat-card').forEach(card => statsObserver.observe(card));
+    }
 
     // =====================================
     // PARALLAX EFFECT FOR HERO
