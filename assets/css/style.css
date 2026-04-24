@@ -197,16 +197,12 @@ a:hover {
     color: var(--color-primary-hover);
 }
 
-/* === THEME TOGGLE === */
+/* === THEME TOGGLE (sitzt jetzt in .nav-right, links vom Hamburger) === */
 .theme-toggle {
-    position: fixed;
-    top: 12px;
-    right: 60px;
-    z-index: var(--z-fixed);
     width: 36px;
     height: 36px;
     border-radius: var(--radius-full);
-    background: var(--color-bg);
+    background: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
     box-shadow: var(--shadow-sm);
     cursor: pointer;
@@ -214,6 +210,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     transition: all var(--transition);
+    flex-shrink: 0;
 }
 
 .theme-toggle:hover {
@@ -264,6 +261,14 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--spacing-3);
+    min-width: 0;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    flex-shrink: 0;
 }
 
 /* Home Button */
@@ -1356,8 +1361,14 @@ section {
     }
 
     .navbar .container {
-        flex-direction: column;
-        gap: var(--spacing-3);
+        /* Mobile: bleibt ROW mit space-between (Logo links, Hamburger rechts).
+           flex-direction: column hätte den Toggle oben in die Mitte gelegt. */
+        gap: var(--spacing-2);
+    }
+
+    /* Schmaler screen: Portfolio-Tagline unter dem Logo ausblenden, spart Platz */
+    .nav-brand .tagline {
+        display: none;
     }
 
     .nav-links {
@@ -1389,10 +1400,7 @@ section {
         padding: var(--spacing-12) 0;
     }
 
-    .theme-toggle {
-        top: var(--spacing-4);
-        right: var(--spacing-4);
-    }
+    /* theme-toggle sitzt jetzt in .nav-right – kein fixed-Positioning mehr nötig */
 }
 
 /* === ACCESSIBILITY === */
