@@ -2,7 +2,7 @@
  * Shader-BG: animiertes Fragment-Shader-Gradient als Hero-Background.
  * Ersetzt den CPU-heavy Particle-Canvas durch einen GPU-Pixel-Shader.
  *
- * Design: zwei sanft rotierende radial-gradients (Violet + Cyan)
+ * Design: zwei sanft rotierende radial-gradients (Rot + Ember-Orange)
  * gemischt mit FBM-Noise für organische Bewegung. Tempo bewusst
  * langsam (8-12 s Zyklus) – subtile Atmosphäre, keine Ablenkung.
  *
@@ -150,8 +150,8 @@
             const s = getComputedStyle(document.documentElement);
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             return {
-                colA: hexToRgb(isDark ? '#a855f7' : '#7c3aed'),
-                colB: hexToRgb(isDark ? '#22d3ee' : '#0891b2'),
+                colA: hexToRgb(isDark ? '#ef4444' : '#dc2626'),   // Signal Red
+                colB: hexToRgb(isDark ? '#f97316' : '#ea580c'),   // Ember Orange
                 colBg: hexToRgb(s.getPropertyValue('--color-bg') || '#05050a'),
                 intensity: isDark ? 0.72 : 0.38
             };

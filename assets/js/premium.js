@@ -1,5 +1,5 @@
 /**
- * Premium Layer v2 — Obsidian × Violet
+ * Premium Layer v2 — Obsidian × Rot
  * Läuft NACH main.js (defer-order). Nutzt Lenis, anime, Splitting
  * wenn verfügbar. Alle Features degradieren graceful auf no-op.
  */
