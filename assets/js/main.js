@@ -62,92 +62,116 @@
     });
 
     // =====================================
-    // HAMBURGER MENU TOGGLE
+    // HAMBURGER MENU TOGGLE (mit Focus-Trap & A11y)
     // =====================================
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     const menuOverlay = document.getElementById('menu-overlay');
     const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+    let lastFocusedBeforeMenu = null;
 
-    // Toggle menu
-    function toggleMenu() {
-        menuToggle?.classList.toggle('active');
-        navMenu?.classList.toggle('active');
-        menuOverlay?.classList.toggle('active');
-
-        // Prevent body scroll when menu is open
-        if (navMenu?.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
+    function focusableItems() {
+        if (!navMenu) return [];
+        return Array.from(navMenu.querySelectorAll(
+            'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )).filter(el => !el.hasAttribute('hidden'));
     }
 
-    // Close menu
+    function openMenu() {
+        if (!navMenu) return;
+        lastFocusedBeforeMenu = document.activeElement;
+        menuToggle?.classList.add('active');
+        menuToggle?.setAttribute('aria-expanded', 'true');
+        navMenu.classList.add('active');
+        menuOverlay?.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        // Erstes Link fokussieren
+        const items = focusableItems();
+        if (items.length) items[0].focus();
+    }
+
     function closeMenu() {
         menuToggle?.classList.remove('active');
+        menuToggle?.setAttribute('aria-expanded', 'false');
         navMenu?.classList.remove('active');
         menuOverlay?.classList.remove('active');
         document.body.style.overflow = '';
+        // Fokus zurück auf den Toggle-Button
+        if (lastFocusedBeforeMenu && document.contains(lastFocusedBeforeMenu)) {
+            lastFocusedBeforeMenu.focus();
+        } else {
+            menuToggle?.focus();
+        }
     }
 
-    // Menu toggle button
-    menuToggle?.addEventListener('click', toggleMenu);
+    function toggleMenu() {
+        const isOpen = navMenu?.classList.contains('active');
+        if (isOpen) closeMenu(); else openMenu();
+    }
 
-    // Menu overlay click
+    if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        if (navMenu?.id) menuToggle.setAttribute('aria-controls', navMenu.id);
+        menuToggle.addEventListener('click', toggleMenu);
+    }
+
     menuOverlay?.addEventListener('click', closeMenu);
 
-    // Close menu when clicking on a link
     navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            // Only close menu for internal links (not external)
-            if (link.getAttribute('href')?.startsWith('#')) {
-                closeMenu();
-            }
+        link.addEventListener('click', () => {
+            if (link.getAttribute('href')?.startsWith('#')) closeMenu();
         });
     });
 
-    // Close menu on ESC key
+    // ESC schließt, Tab hält den Fokus innerhalb des Menüs
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu?.classList.contains('active')) {
+        if (!navMenu?.classList.contains('active')) return;
+        if (e.key === 'Escape') {
+            e.preventDefault();
             closeMenu();
+            return;
         }
-    });
-
-    // =====================================
-    // SCROLL PROGRESS BAR
-    // =====================================
-    const scrollProgress = document.querySelector('.scroll-progress');
-
-    function updateScrollProgress() {
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (window.scrollY / windowHeight) * 100;
-        if (scrollProgress) {
-            scrollProgress.style.width = scrolled + '%';
-        }
-    }
-
-    window.addEventListener('scroll', updateScrollProgress);
-
-    // =====================================
-    // NAVBAR SCROLL EFFECT
-    // =====================================
-    const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (navbar) {
-            if (currentScroll > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        if (e.key === 'Tab') {
+            const items = focusableItems();
+            if (!items.length) return;
+            const first = items[0];
+            const last = items[items.length - 1];
+            const active = document.activeElement;
+            if (e.shiftKey && active === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && active === last) {
+                e.preventDefault();
+                first.focus();
             }
         }
-
-        lastScroll = currentScroll;
     });
+
+    // =====================================
+    // SCROLL PROGRESS BAR + NAVBAR SCROLL
+    // =====================================
+    const scrollProgress = document.querySelector('.scroll-progress');
+    const navbar = document.querySelector('.navbar');
+    let scrollTicking = false;
+
+    function onScroll() {
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const y = window.scrollY;
+        if (scrollProgress && docHeight > 0) {
+            scrollProgress.style.width = ((y / docHeight) * 100) + '%';
+        }
+        if (navbar) {
+            navbar.classList.toggle('scrolled', y > 100);
+        }
+        scrollTicking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!scrollTicking) {
+            window.requestAnimationFrame(onScroll);
+            scrollTicking = true;
+        }
+    }, { passive: true });
 
     // =====================================
     // SMOOTH SCROLL
@@ -204,6 +228,9 @@
             this.particles = [];
             this.particleCount = window.innerWidth < 768 ? 30 : 50;
             this.mouse = { x: null, y: null, radius: 150 };
+            this.hasHover = window.matchMedia('(hover: hover)').matches;
+            this.paused = false;
+            this.rafId = null;
 
             this.init();
             this.animate();
@@ -228,18 +255,11 @@
         }
 
         animate() {
+            if (this.paused) return;
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
-            // Update and draw particles
-            this.particles.forEach(particle => {
-                particle.update(this.mouse);
-                particle.draw(this.ctx);
-            });
-
-            // Draw connections
+            this.particles.forEach(p => { p.update(this.mouse); p.draw(this.ctx); });
             this.drawConnections();
-
-            requestAnimationFrame(() => this.animate());
+            this.rafId = requestAnimationFrame(() => this.animate());
         }
 
         drawConnections() {
@@ -251,7 +271,7 @@
 
                     if (distance < 120) {
                         const opacity = 1 - (distance / 120);
-                        this.ctx.strokeStyle = `rgba(26, 115, 232, ${opacity * 0.2})`; // Google Blue
+                        this.ctx.strokeStyle = `rgba(26, 115, 232, ${opacity * 0.2})`;
                         this.ctx.lineWidth = 1;
                         this.ctx.beginPath();
                         this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
@@ -268,14 +288,27 @@
                 this.createParticles();
             });
 
-            window.addEventListener('mousemove', (e) => {
-                this.mouse.x = e.x;
-                this.mouse.y = e.y;
-            });
+            // Mouse-Interaktion nur auf Hover-fähigen Geräten (spart CPU auf Touch)
+            if (this.hasHover) {
+                window.addEventListener('mousemove', (e) => {
+                    this.mouse.x = e.x;
+                    this.mouse.y = e.y;
+                }, { passive: true });
+                window.addEventListener('mouseout', () => {
+                    this.mouse.x = null;
+                    this.mouse.y = null;
+                });
+            }
 
-            window.addEventListener('mouseout', () => {
-                this.mouse.x = null;
-                this.mouse.y = null;
+            // Pausiert Animation bei inaktivem Tab
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    this.paused = true;
+                    if (this.rafId) cancelAnimationFrame(this.rafId);
+                } else if (this.paused) {
+                    this.paused = false;
+                    this.animate();
+                }
             });
         }
     }
@@ -507,72 +540,10 @@
     // ESC key handling is in the menu toggle section
 
     // =====================================
-    // CONSOLE EASTER EGG
-    // =====================================
-    const styles = [
-        'font-size: 20px',
-        'font-weight: bold',
-        'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        'color: white',
-        'padding: 15px 25px',
-        'border-radius: 10px',
-        'text-shadow: 2px 2px 4px rgba(0,0,0,0.3)'
-    ].join(';');
-
-    console.log('%c🚀 Belkis Aslani Portfolio', styles);
-    console.log('%cPowered by Jekyll & GitHub Pages', 'font-size: 14px; color: #667eea;');
-    console.log('%cLove the code? Check out the repo!', 'font-size: 12px; color: #999;');
-    console.log('%cBuilt with ❤️ and lots of ☕', 'font-size: 12px; color: #f093fb;');
-
-    // =====================================
-    // 3D FLOATING CARD - DISABLED (No scroll effect)
-    // =====================================
-    // Card effects completely disabled per user request
-    // No transform, no scale, no rotation
-    // Only counter animation active
-
-    // =====================================
-    // STATS COUNTER ANIMATION
-    // =====================================
-    function animateCounter(element) {
-        const target = parseInt(element.getAttribute('data-target'));
-        const duration = 2000;
-        const start = 0;
-        const increment = target / (duration / 16);
-        let current = start;
-
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(current);
-            }
-        }, 16);
-    }
-
-    // Trigger counter when card is visible
-    if (floatingCard) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counters = floatingCard.querySelectorAll('.stat-value');
-                    counters.forEach(counter => animateCounter(counter));
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(floatingCard);
-    }
-
-    // =====================================
     // LOADING COMPLETE
     // =====================================
     window.addEventListener('load', () => {
         document.body.classList.add('loaded');
-        console.log('✅ Portfolio loaded successfully!');
     });
 
 })();

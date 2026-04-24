@@ -163,7 +163,7 @@ title: Portfolio - Belkis Aslani
                         <p class="project-description">{{ project.description }}</p>
                         {% if project.audio %}
                         <div class="project-audio">
-                            <audio controls style="width: 100%; margin: 1rem 0;">
+                            <audio controls class="project-audio-player">
                                 <source src="{{ project.audio }}" type="audio/mpeg">
                                 Dein Browser unterstützt kein Audio.
                             </audio>
@@ -187,13 +187,12 @@ title: Portfolio - Belkis Aslani
         {% endif %}
 
         <!-- All Other Projects -->
-        {% assign all_projects = site.data.projects %}
-        {% if all_projects.size > featured.size %}
+        {% assign non_featured = site.data.projects | where_exp: "p", "p.featured != true" %}
+        {% if non_featured.size > 0 %}
         <div class="all-projects-section">
             <h3 class="projects-subtitle reveal">Weitere Projekte</h3>
             <div class="projects-grid">
-                {% for project in site.data.projects %}
-                {% unless project.featured %}
+                {% for project in non_featured %}
                 <article class="project-card reveal" data-size="{{ project.size | default: 'medium' }}">
                     <div class="project-image">
                         {% if project.image_mobile %}
@@ -216,7 +215,7 @@ title: Portfolio - Belkis Aslani
                         <p class="project-description">{{ project.description }}</p>
                         {% if project.audio %}
                         <div class="project-audio">
-                            <audio controls style="width: 100%; margin: 1rem 0;">
+                            <audio controls class="project-audio-player">
                                 <source src="{{ project.audio }}" type="audio/mpeg">
                                 Dein Browser unterstützt kein Audio.
                             </audio>
@@ -234,7 +233,6 @@ title: Portfolio - Belkis Aslani
                         </a>
                     </div>
                 </article>
-                {% endunless %}
                 {% endfor %}
             </div>
         </div>

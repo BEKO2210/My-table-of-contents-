@@ -611,13 +611,10 @@ a:hover {
 
 [data-theme="dark"] .social-link:visited,
 [data-theme="dark"] .social-link:active,
-[data-theme="dark"] .social-link:focus {
-    color: #000000;
-    background: var(--color-primary);
-}
-
+[data-theme="dark"] .social-link:focus,
 [data-theme="dark"] .social-link:hover {
-    color: #000000;
+    color: #ffffff;
+    background: var(--color-primary);
 }
 
 .social-link i {
@@ -718,11 +715,11 @@ a:hover {
 [data-theme="dark"] .btn-primary:visited,
 [data-theme="dark"] .btn-primary:active,
 [data-theme="dark"] .btn-primary:focus {
-    color: #000000;
+    color: #ffffff;
 }
 
 [data-theme="dark"] .btn-primary:hover {
-    color: #000000;
+    color: #ffffff;
 }
 
 .btn-secondary {
@@ -746,17 +743,17 @@ a:hover {
     color: var(--color-primary);
 }
 
-/* Dark Mode: Schwarze Schrift für sekundäre Buttons im aktiven Zustand */
+/* Dark Mode: Weiße Schrift für sekundäre Buttons im aktiven/hover Zustand */
 [data-theme="dark"] .btn-secondary:visited,
 [data-theme="dark"] .btn-secondary:active,
 [data-theme="dark"] .btn-secondary:focus {
-    color: #000000;
+    color: #ffffff;
     background: var(--color-primary);
     border-color: var(--color-primary);
 }
 
 [data-theme="dark"] .btn-secondary:hover {
-    color: #000000;
+    color: #ffffff;
     background: var(--color-primary-hover);
 }
 
@@ -950,6 +947,11 @@ section {
     line-height: 1.6;
     margin-bottom: var(--spacing-4);
     font-size: var(--text-sm);
+}
+
+.project-audio-player {
+    width: 100%;
+    margin: var(--spacing-4) 0;
 }
 
 .project-tags {
