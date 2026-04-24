@@ -1856,9 +1856,13 @@ body.cursor-ready [role="button"] { cursor: none; }
 }
 
 /* --- Split-Text Reveal (Splitting.js) ---
-   Jeder char/word wird als <span class="char" style="--char-index: N"> gerendert.
-   Per Default unsichtbar + translated, .split-ready triggert Reveal mit stagger.
+   FOUC-Schutz: unter premium-ready sind Splitting-Targets hidden bis
+   die Lib sie in char/word-Spans transformiert hat (.splitting class).
 */
+html.premium-ready [data-splitting]:not(.splitting) {
+    visibility: hidden;
+}
+
 .split-line { display: block; overflow: hidden; }
 .split-line .char,
 .split-line .word {
@@ -1875,10 +1879,10 @@ body.cursor-ready [role="button"] { cursor: none; }
 }
 .split-words .word {
     display: inline-block;
-    transform: translateY(80%);
+    transform: translateY(60%);
     opacity: 0;
     transition: transform 760ms var(--ease-out-expo), opacity 540ms var(--ease-out-expo);
-    transition-delay: calc(var(--word-index, 0) * 55ms);
+    transition-delay: calc(var(--word-index, 0) * 40ms);
 }
 .split-words.revealed .word {
     transform: translateY(0);

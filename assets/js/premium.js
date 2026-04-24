@@ -197,13 +197,126 @@
     }
 
     // =============================================================
+    // SPLIT-TEXT (Splitting.js) für .split-line / .split-words
+    // Fügt --char-index / --word-index pro Fragment hinzu.
+    // Reveal wird per anime-Timeline (Hero) oder Observer getriggert.
+    // =============================================================
+    function initSplitting() {
+        if (typeof Splitting === 'undefined') return;
+        Splitting({ target: '[data-splitting]' });
+    }
+
+    // =============================================================
+    // HERO-INTRO-TIMELINE (anime.js)
+    // Premium, choreographierte Reveal-Sequenz
+    // =============================================================
+    function initHeroTimeline() {
+        if (reduceMotion || typeof anime === 'undefined') {
+            // Fallback: alle split-lines sofort sichtbar
+            document.querySelectorAll('.split-line, .split-words').forEach(el => el.classList.add('revealed'));
+            document.querySelectorAll('[data-hero-step]').forEach(el => {
+                el.style.opacity = '';
+                el.style.transform = '';
+            });
+            return;
+        }
+
+        const byStep = (n) => document.querySelector(`[data-hero-step="${n}"]`);
+        // Initialstate: alles unsichtbar (via JS, kein CSS-Flash)
+        document.querySelectorAll('[data-hero-step]').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(24px)';
+            el.style.willChange = 'opacity, transform';
+        });
+
+        const tl = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: 720,
+            autoplay: false
+        });
+
+        // Step 1: Badge
+        tl.add({
+            targets: byStep(1),
+            opacity: [0, 1], translateY: [18, 0],
+            duration: 620
+        }, 80);
+
+        // Step 2: Greeting (split chars stagger)
+        const greeting = byStep(2);
+        if (greeting) {
+            greeting.classList.add('revealed');
+            tl.add({
+                targets: greeting,
+                opacity: [0, 1], translateY: [0, 0], duration: 1
+            }, 260);
+        }
+
+        // Step 3: Name (Gradient) – fade + subtle scale
+        tl.add({
+            targets: byStep(3),
+            opacity: [0, 1], translateY: [32, 0], scale: [0.96, 1],
+            duration: 880, easing: 'easeOutExpo'
+        }, 480);
+
+        // Step 4: Role Carousel
+        tl.add({
+            targets: byStep(4),
+            opacity: [0, 1], translateY: [16, 0],
+            duration: 620
+        }, 900);
+
+        // Step 5: Description (split words stagger)
+        const desc = byStep(5);
+        if (desc) {
+            desc.classList.add('revealed');
+            tl.add({
+                targets: desc,
+                opacity: [0, 1], translateY: [0, 0], duration: 1
+            }, 1000);
+        }
+
+        // Step 6: CTAs
+        tl.add({
+            targets: byStep(6),
+            opacity: [0, 1], translateY: [14, 0],
+            duration: 560
+        }, 1350);
+
+        // Step 7: Social Links (stagger über Kinder)
+        const social = byStep(7);
+        if (social) {
+            social.style.opacity = '1';
+            social.style.transform = 'none';
+            tl.add({
+                targets: social.querySelectorAll('.social-link'),
+                opacity: [0, 1], translateY: [12, 0],
+                duration: 520,
+                delay: anime.stagger(70)
+            }, 1550);
+        }
+
+        // Cleanup after play (ent-mount will-change)
+        tl.finished?.then(() => {
+            document.querySelectorAll('[data-hero-step]').forEach(el => {
+                el.style.willChange = '';
+                el.style.transform = '';
+            });
+        });
+
+        tl.play();
+    }
+
+    // =============================================================
     // BOOT
     // =============================================================
     function boot() {
         initLenis();
         initCursor();
         initMagnetic();
+        initSplitting();
         initRevealStagger();
+        initHeroTimeline();
         wrapThemeToggleWithViewTransition();
         window.__premium.ready = true;
     }
