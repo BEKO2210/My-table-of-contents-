@@ -42,6 +42,17 @@
   size: "large"
   open_source: true
 
+- name: "European Alternatives"
+  description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.webp"
+  url: "https://beko2210.github.io/european-alternatives.eu-free-open-source/"
+  tags: ["FOSS", "Directory", "GDPR", "Astro"]
+  category: "Tools"
+  featured: true
+  size: "large"
+  open_source: true
+
 # --- Statische Logos / Icons ---
 
 - name: "Cricket Brain"
@@ -78,17 +89,6 @@
   open_source: true
 
 # --- Screenshots ---
-
-- name: "European Alternatives"
-  description: "293+ kostenlose FOSS-Alternativen zu Google, Microsoft & Adobe – DSGVO-konform, selbst hostbar, durchsuchbar"
-  type: "project"
-  image: "/My-table-of-contents-/assets/images/projects/euro-alternatives-desktop.png"
-  url: "https://beko2210.github.io/european-alternatives.eu-free-open-source/"
-  tags: ["FOSS", "Directory", "GDPR", "Astro"]
-  category: "Tools"
-  featured: true
-  size: "large"
-  open_source: true
 
 - name: "GitHub App Store"
   description: "Kuratiertes App-Store-Frontend für GitHub-Projekte – Discovery, Kategorien, Direktinstallation"
@@ -295,6 +295,17 @@
   url: "https://github.com/BEKO2210/local-llm-swarm"
   tags: ["AI", "LLM", "Multi-Agent", "GGUF"]
   category: "AI"
+  featured: false
+  size: "medium"
+  open_source: true
+
+- name: "Pimp My Kebap"
+  description: "DSGVO-konforme, mobile-first Bestell-Webseite für ein Kebap-Restaurant – WhatsApp-Integration, kein Backend, kein Tracking"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/pimp-my-kebap-desktop.webp"
+  url: "https://beko2210.github.io/pimp-my-kebap/"
+  tags: ["PWA", "TypeScript", "GDPR", "Mobile-First"]
+  category: "Business"
   featured: false
   size: "medium"
   open_source: true

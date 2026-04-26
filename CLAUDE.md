@@ -72,9 +72,9 @@ Niemals direkt auf `main`. Immer auf dem von der Session vorgegebenen `claude/<t
 ## 5. Aktueller Zustand (Cache)
 - **Projekte in `projects.yml`**, davon **14 featured**.
 - **Featured (Reihenfolge im File):**
-  - *Animierte Logos:* Prompt-Versionierung, KI-Entdecker, World One 2.0.
+  - *Animierte Logos:* Prompt-Versionierung, KI-Entdecker, World One 2.0, European Alternatives.
   - *Statische Logos:* Cricket Brain, Firstbrain, IQ-TEST.
-  - *Screenshots:* European Alternatives, GitHub App Store, API Directory, PrepTrack, Survival Kit, Lyra Prompts, QuickBrief, MiroFish DE.
+  - *Screenshots:* GitHub App Store, API Directory, PrepTrack, Survival Kit, Lyra Prompts, QuickBrief, MiroFish DE.
 - **Removed (nicht wieder aufnehmen ohne Nachfrage):** Life Organizer, Context Engineering, IdeaForge, Vokabel-go, HomeOfficeDeutschland, Belkis LLM Finetunes, Code-Universum, World report.
 - **PWA aktiv:** installierbar als „B.A Portfolio", schwarzer BG, Icon aus `assets/media/PWA_Icon.png`. Icon-Set in `assets/icons/`. Manifest: `manifest.webmanifest`. Service Worker: `sw.js` mit Auto-Versionierung über `site.time` (neuer Cache pro Jekyll-Build, alte Caches werden aufgeräumt). Registrierung im `_layouts/default.html`-Footer.
 
