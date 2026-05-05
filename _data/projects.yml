@@ -2,7 +2,7 @@
 # Schema siehe CLAUDE.md §3
 
 # ============================================================
-# FEATURED (15) – Reihenfolge wie auf der Startseite
+# FEATURED (16) – Reihenfolge wie auf der Startseite
 # Sortierung: animierte Logos zuerst, dann Static-Logos/Icons,
 # dann Screenshots. Keine OpenGraph-Fallback-Einträge im Featured.
 # ============================================================
@@ -21,6 +21,17 @@
   open_source: true
 
 # --- Animierte Logos ---
+
+- name: "Gusto"
+  description: "Intelligenter Einkaufs-Butler – Gericht eingeben, schön formatierte Einkaufsliste mit Kategorien zurück bekommen"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/el-gusto-desktop.svg"
+  url: "https://el-gusto.netlify.app/"
+  tags: ["AI", "Cooking", "Shopping", "Web App"]
+  category: "Tools"
+  featured: true
+  size: "medium"
+  open_source: false
 
 - name: "Prompt-Versionierung"
   description: "Branch. Prove. Ship. – Offline-first Git-Style Prompt-Management mit Versionskontrolle, Evals und Peer-Review im Browser"
