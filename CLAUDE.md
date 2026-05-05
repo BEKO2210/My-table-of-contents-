@@ -70,8 +70,9 @@ Niemals direkt auf `main`. Immer auf dem von der Session vorgegebenen `claude/<t
 `git push -u origin <branch>`. Kein Force-Push. Keine PR ohne explizite Aufforderung.
 
 ## 5. Aktueller Zustand (Cache)
-- **Projekte in `projects.yml`**, davon **14 featured**.
+- **Projekte in `projects.yml`**, davon **15 featured**.
 - **Featured (Reihenfolge im File):**
+  - *Highlight (Position 1):* CameraPrompt Pro (Social-Card als Bild, auf User-Wunsch oben).
   - *Animierte Logos:* Prompt-Versionierung, KI-Entdecker, World One 2.0, European Alternatives.
   - *Statische Logos:* Cricket Brain, Firstbrain, IQ-TEST.
   - *Screenshots:* GitHub App Store, API Directory, PrepTrack, Survival Kit, Lyra Prompts, QuickBrief, MiroFish DE.
@@ -109,7 +110,7 @@ Kategorien: `bug` · `feature` · `maintenance` · `consistency` · `perf` · `d
 - [ ] YAML valide (keine Tab-Einrückung, Quotes konsistent)
 - [ ] Jeder **lokale** `image:`-Pfad in `projects.yml` existiert auf Platte (externe `https://`-URLs sind erlaubt und werden nicht geprüft)
 - [ ] Keine Waisen-Bilder in `assets/images/projects/` (ohne YAML-Referenz)
-- [ ] Genau **14** Einträge mit `featured: true`
+- [ ] Genau **15** Einträge mit `featured: true`
 - [ ] Featured-Sortierung: animierte Logos oben, dann statische Logos/Icons, dann Screenshots
 - [ ] Keine OpenGraph-Fallback-Einträge (`opengraph.githubassets.com`) im Featured-Block
 - [ ] README/ANLEITUNG/SCHNELLSTART noch stimmig
@@ -120,7 +121,7 @@ Quick-Check aus dem Repo-Root:
 # orphan-check
 comm -23 <(ls assets/images/projects | sort) <(grep -oE '[a-z0-9.-]+\.(jpg|png|svg|gif|webp)' _data/projects.yml | sort -u)
 # featured count (nur echte YAML-Einträge, nicht Schema-Kommentar)
-grep -c '^  featured: true' _data/projects.yml   # Erwartung: 14
+grep -c '^  featured: true' _data/projects.yml   # Erwartung: 15
 # Opengraph-Fallbacks im Featured-Block (Erwartung: 0)
 awk '/^# FEATURED/,/^# NON-FEATURED/' _data/projects.yml | grep -c opengraph.githubassets
 ```
