@@ -2,10 +2,23 @@
 # Schema siehe CLAUDE.md §3
 
 # ============================================================
-# FEATURED (14) – Reihenfolge wie auf der Startseite
+# FEATURED (15) – Reihenfolge wie auf der Startseite
 # Sortierung: animierte Logos zuerst, dann Static-Logos/Icons,
 # dann Screenshots. Keine OpenGraph-Fallback-Einträge im Featured.
 # ============================================================
+
+# --- Highlight ---
+
+- name: "CameraPrompt Pro"
+  description: "Modulare Kamera-Setup-Prompts für AI-Bildgenerierung – 36 Kameras, 80+ Objektive, 21 Genres, 462+ Prompts"
+  type: "project"
+  image: "/My-table-of-contents-/assets/images/projects/virtualcam-desktop.jpg"
+  url: "https://beko2210.github.io/VirtualCam/"
+  tags: ["AI", "Photography", "Prompts", "PWA"]
+  category: "AI"
+  featured: true
+  size: "large"
+  open_source: true
 
 # --- Animierte Logos ---
 
